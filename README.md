@@ -8,14 +8,17 @@ Welcome to my game development portfolio! This repository showcases the projects
 I am a passionate game developer focusing on gameplay programming, player mechanics, and AI.
 ## Projects
 
-### [Vesper](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
+### Vesper
+
 ![Thumbnail](/Vesper/Images/vesper_thumbnail.png)
+
 
 - A fast-paced 2D platformer about a formless being crashing on a planet and trying to find her way back to the sky.
 - **Team:** Three programmers and three artists.
 - **Technologies Used:** Unity2D, DOTween and Input system.
 - [Vesper ITCH.IO](https://yrgo-game-creator.itch.io/vesper)
 
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
 
 ![](/Vesper/Images/Screenshot2024-01-04145910.png)    |  ![](/Vesper/Images/3G5X+H.png)
 :-------------------------:|:-------------------------:
@@ -33,7 +36,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 ![](/ABC/Images/GamePlay2.gif)  |  ![](/ABC/Images/GamePlay3.gif)
 
 
-### [Kat-boom](https://github.com/Samurai-Ebben/Portflio/tree/main/Kat-boom)
+### Kat-boom
 ![Thumbnail_katboom](/Kat-boom/Images/splashart.png)
 
 - A small project made in 4 days. A cat ghost looking for its yarnball to rest in peace.
@@ -41,10 +44,12 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 - **Technologies Used:** Unity and Lootlocker database.
 - [Katboom On Itch.IO](https://ebben.itch.io/katboom)
 
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Kat-boom)
+
 ![](/Kat-boom/Images/GhostMode.gif)    |  ![](/Kat-boom/Images/Movement.gif)
 :-------------------------:|:-------------------------:
 
-### [Mjolnir's Might](https://github.com/Samurai-Ebben/Portflio/tree/main/MjolnirsMight)
+### Mjolnir's Might
 
 -  Third-person game, Inspired by Thor and GOD Of War.
 -  A solo assignment in Yrgo. Made to test our abilities using Unreal.
