@@ -22,7 +22,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 ![](/Vesper/Images/vesper_trailer_v2.gif)              |  ![](/Vesper/Images/Screenshot2024-01-04150218.png)
 
 
-### A-B-C(Auto-Battling-Cards)
+### A-B-C (Auto-Battling-Cards)
 -  A simple mobile online auto battle, card game with a twist.
 -  A solo assignment in Yrgo. Made to test our abilities using database.
 -  **Technologies Used:** Unity, DOTween, Firebase, Shader graph system.
@@ -61,13 +61,13 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 
 ## Education
 
-- High vocational diploma in Game Creator Programmer - Yrgo, 2025
-- Bachelor's degree in Computer Science: system development - Högskolan I Skövde, 2026
+- High vocational Studies in Game Creator Programmer - Yrgo, 2025
+- Computer Science: system development - Högskolan I Skövde, 2026
 
 ## Contact
 
 - **Email:** abanalhindi47@gmail.com
-- **LinkedIn:** (https://www.linkedin.com/in/abdalrhman-m-alhindi/)
+- **LinkedIn:** https://www.linkedin.com/in/abdalrhman-m-alhindi/
 
 Feel free to contact me to discuss potential collaborations or have any questions about my work!
 
