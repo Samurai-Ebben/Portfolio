@@ -2,4 +2,4 @@
 
 ![](/MjolnirsMight/Images/Aim.png)    |  ![](/MjolnirsMight/Images/OpeningGate.gif)
 :-------------------------:|:-------------------------:
-![](/MjolnirsMight/Images/Trhowing+recalling.gif)  |
+![](/MjolnirsMight/Images/Trhowing+recalling.gif)  | ![](/MjolnirsMight/Images/Recalling.gif)
