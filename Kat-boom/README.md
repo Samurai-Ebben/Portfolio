@@ -1,5 +1,9 @@
 #                                                             Kat-boom
 
+
+![](/Kat-boom/Images/GhostMode.gif)    |  ![](/Kat-boom/Images/Movement.gif)
+:-------------------------:|:-------------------------:
+
 ## Summary of the project
 Kat-boom was a 4-day game project that was my first game project with a team.
 
@@ -398,6 +402,3 @@ public class GameManager : MonoBehaviour
 }
 ```
 </details>
-
-![](/Kat-boom/Images/GhostMode.gif)    |  ![](/Kat-boom/Images/Movement.gif)
-:-------------------------:|:-------------------------:
