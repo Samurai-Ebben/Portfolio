@@ -7,6 +7,16 @@ Welcome to my game development portfolio! This repository showcases the projects
 
 I am a passionate game developer focusing on gameplay programming, player mechanics, and AI.
 
+---
+
+## Table of Contents
+1. [Projects](#Projects)
+2. [Skills](#Skills)
+3. [Education](#Education)
+4. [Contacts](#Contacts)
+
+---
+
 ## Projects
 
 ### Vesper
