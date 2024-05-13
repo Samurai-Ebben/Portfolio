@@ -28,10 +28,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 -  A solo assignment in Yrgo. Made to test our abilities using database.
 -  **Technologies Used:** Unity, DOTween, Firebase, Shader graph system.
 
-
-![](/ABC/Images/FlushSet.png)    |  ![](/ABC/Images/WinScreen.png)
-:-------------------------:|:-------------------------:
-![](/ABC/Images/GamePlay2.gif)  |  ![](/ABC/Images/GamePlay3.gif)
+![](/ABC/Images/GamePlay3.gif)
 
 ---
 
