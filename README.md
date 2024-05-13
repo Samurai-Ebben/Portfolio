@@ -41,9 +41,6 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Kat-boom)
 
-![](/Kat-boom/Images/GhostMode.gif)    |  ![](/Kat-boom/Images/Movement.gif)
-:-------------------------:|:-------------------------:
-
 ### Mjolnir's Might
 
 -  Third-person game, Inspired by Thor and GOD Of War.
