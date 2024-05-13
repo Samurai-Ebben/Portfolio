@@ -68,12 +68,15 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 
 - **Programming Languages:** C#, C++, Java and Python.
 - **Game Engines:** Unity, Unreal Engine.
+- Fast learner and adapts quickly to any situation.
+- Time/project management.
 
 ## Education
 
 - High vocational Studies in Game Creator Programmer - Yrgo, 2025
 - Computer Science: system development - Högskolan I Skövde, 2026
-
+- Unity junior programmer [Certification](https://www.credly.com/badges/b8378b37-06ee-4570-a708-e0825a83b21f/public_url)
+- 
 ## Contact
 
 - **Email:** abanalhindi47@gmail.com
