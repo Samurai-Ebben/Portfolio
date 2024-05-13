@@ -48,12 +48,12 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 ---
 
 ### Mjolnir's Might
+  ![](/MjolnirsMight/Images/Recalling.gif)
 
 -  Third-person game, Inspired by Thor and GOD Of War.
 -  A solo assignment in Yrgo. Made to test our abilities using Unreal.
 -  **Technologies Used:** Unreal, Blueprints, Niagara.
 
-  ![](/MjolnirsMight/Images/Recalling.gif)
 
 ## Skills
 
