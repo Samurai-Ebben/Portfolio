@@ -6,6 +6,7 @@ Welcome to my game development portfolio! This repository showcases the projects
 ## About Me
 
 I am a passionate game developer focusing on gameplay programming, player mechanics, and AI.
+
 ## Projects
 
 ### Vesper
@@ -20,6 +21,8 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
 
+---
+
 ### A-B-C (Auto-Battling-Cards)
 -  A simple mobile online auto battle, card game with a twist.
 -  A solo assignment in Yrgo. Made to test our abilities using database.
@@ -30,6 +33,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 :-------------------------:|:-------------------------:
 ![](/ABC/Images/GamePlay2.gif)  |  ![](/ABC/Images/GamePlay3.gif)
 
+---
 
 ### Kat-boom
 ![Thumbnail_katboom](/Kat-boom/Images/splashart.png)
@@ -40,6 +44,8 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 - [Katboom On Itch.IO](https://ebben.itch.io/katboom)
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Kat-boom)
+
+---
 
 ### Mjolnir's Might
 
