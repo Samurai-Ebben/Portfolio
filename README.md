@@ -10,10 +10,10 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 ---
 
 ## Table of Contents
-1. [Projects](#Projects)
-2. [Skills](#Skills)
-3. [Education](#Education)
-4. [Contacts](#Contact)
+[Projects](#Projects)
+[Skills](#Skills)
+[Education](#Education)
+[Contacts](#Contact)
 
 ---
 
