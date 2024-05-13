@@ -20,11 +20,6 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
 
-![](/Vesper/Images/Screenshot2024-01-04145910.png)    |  ![](/Vesper/Images/3G5X+H.png)
-:-------------------------:|:-------------------------:
-![](/Vesper/Images/vesper_trailer_v2.gif)              |  ![](/Vesper/Images/Screenshot2024-01-04150218.png)
-
-
 ### A-B-C (Auto-Battling-Cards)
 -  A simple mobile online auto battle, card game with a twist.
 -  A solo assignment in Yrgo. Made to test our abilities using database.
