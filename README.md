@@ -13,7 +13,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 1. [Projects](#Projects)
 2. [Skills](#Skills)
 3. [Education](#Education)
-4. [Contacts](#Contacts)
+4. [Contacts](#Contact)
 
 ---
 
