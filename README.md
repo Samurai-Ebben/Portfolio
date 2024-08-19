@@ -66,15 +66,20 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 
 -  Third-person game, Inspired by Thor and GOD Of War.
 -  A solo assignment in Yrgo. Made to test our abilities using Unreal.
--  **Technologies Used:** Unreal, Blueprints, Niagara.
+-  **Technologies Used:** Unreal Engine 5, Blueprints, Niagara.
 -  
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/MjolnirsMight)
+
 ---
 
 ### Hell Racer
 ![](/HellRacer/Images/Thumbnail.png)
 
+-  Kart racing game, Inspired by Mario Kart.
+-  A group assignment in Yrgo. Made to try out C++ alone.
+-  **Technologies Used:** Unreal Engine 5, C++ and its libraries.
 
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/HellRacer)
 
 ## Skills
 
