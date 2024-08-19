@@ -14,4 +14,4 @@ Hell Racer is a single player kart game set in hell. You play as an imp and will
 
 ## Responsibilities
 A Kart game has many mechanics but in order to make the game fun and exciting the most important mechanics are the movements. One of which is the 
-drifting mechanic. Which is the main mechainc I was responsible of making.
+drifting mechanic. Which is the main mechanic I was responsible of making as well as the ghost system and Most of the UI.
