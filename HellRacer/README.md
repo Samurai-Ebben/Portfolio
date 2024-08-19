@@ -8,3 +8,10 @@ Hell Racer was an 8 weeks game project in Yrgo developed by 8 members. The 4 pro
 Hence, Hell Racer.
 
 [Hell Racer ITCH.IO](https://yrgo-game-creator.itch.io/hellracer)
+
+## About
+Hell Racer is a single player kart game set in hell. You play as an imp and will race the ghost of your own racing lap records.
+
+## Responsibilities
+A Kart game has many mechanics but in order to make the game fun and exciting the most important mechanics are the movements. One of which is the 
+drifting mechanic. Which is the main mechainc I was responsible of making.
