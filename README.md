@@ -68,6 +68,11 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 -  A solo assignment in Yrgo. Made to test our abilities using Unreal.
 -  **Technologies Used:** Unreal, Blueprints, Niagara.
 
+---
+
+### Hell Racer
+![](/HellRacer/Images/Thumbnail.png)
+
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/MjolnirsMight)
 
 ## Skills
