@@ -19,13 +19,13 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 
 ![Thumbnail](/Vesper/Images/vesper_thumbnail.png)
 
-![](/Vesper/Images/Kcxlyj.png)
+  ![](/Vesper/Images/Kcxlyj.png)
+<img src=/Vesper/Images/Kcxlyj.png width="20" height="20">
 - A fast-paced 2D platformer about a formless being crashing on a planet and trying to find her way back to the sky.
 - **Team:** Three programmers and three artists.
 - **Technologies Used:** Unity2D, DOTween and Input system.
 - SGA 2024 Game of the year nominee. 
 - [Vesper ITCH.IO](https://yrgo-game-creator.itch.io/vesper)
-  ![](/Vesper/Images/.gif)
   
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
 
