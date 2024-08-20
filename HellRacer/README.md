@@ -13,5 +13,4 @@ Hence, Hell Racer.
 Hell Racer is a single player kart game set in hell. You play as an imp and will race the ghost of your own racing lap records.
 
 ## Responsibilities
-A Kart game has many mechanics but in order to make the game fun and exciting the most important mechanics are the movements. One of which is the 
-drifting mechanic. Which is the main mechanic I was responsible of making, as well as the ghost system and Most of the UI.
+A kart game involves numerous mechanics, but to ensure the gameplay is fun and exciting, the most crucial aspect is movement. Among these, the drifting mechanic stands out as particularly important. I was primarily responsible for developing this key drifting mechanic, along with creating the ghost system and a significant portion of the user interface (UI).
