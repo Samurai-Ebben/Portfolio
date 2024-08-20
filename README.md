@@ -23,8 +23,8 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 - A fast-paced 2D platformer about a formless being crashing on a planet and trying to find her way back to the sky.
 - **Team:** Three programmers and three artists.
 - **Technologies Used:** Unity2D, DOTween and Input system.
-- SGA 2024 Game of the year nominee.
-- [Vesper ITCH.IO](https://yrgo-game-creator.itch.io/vesper)
+- SGA 2024 Game of the year nominee. 
+- [Vesper ITCH.IO](https://yrgo-game-creator.itch.io/vesper) ![](/Vesper/Images/.gif)
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
 
