@@ -60,7 +60,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 -  Third-person game, Inspired by Thor and GOD Of War.
 -  A solo assignment in Yrgo. Made to test our abilities using Unreal.
 -  **Technologies Used:** Unreal Engine 5, Blueprints, Niagara.
--  
+
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/MjolnirsMight)
 
 ---
@@ -73,6 +73,8 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 -  **Technologies Used:** Unreal Engine 5, C++ and its libraries.
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/HellRacer)
+
+---
 
 ## Skills
 
