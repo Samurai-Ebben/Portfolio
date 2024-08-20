@@ -19,7 +19,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 
 ![Thumbnail](/Vesper/Images/vesper_thumbnail.png)
 
-![](/Vesper/Images/SGA_GOY.png)
+![](/Vesper/Images/Kcxlyj.png)
 - A fast-paced 2D platformer about a formless being crashing on a planet and trying to find her way back to the sky.
 - **Team:** Three programmers and three artists.
 - **Technologies Used:** Unity2D, DOTween and Input system.
