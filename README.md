@@ -26,6 +26,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 - SGA 2024 Game of the year nominee. ![](/Vesper/Images/SGA_GOYA.png)
 - [Vesper ITCH.IO](https://yrgo-game-creator.itch.io/vesper)
   ![](/Vesper/Images/.gif)
+  
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
 
 ---
