@@ -82,7 +82,8 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 - **Game Engines:** Unity, Unreal Engine.
 - Fast learner and adapts quickly to any situation.
 - Time/project management.
-- 
+- Multitasker
+- Problem solver: Finding the problem is half of the solution.
 
 
 ## Education
