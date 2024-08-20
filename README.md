@@ -10,8 +10,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 ---
 
 ## Table of Contents
-[Projects](#Projects) - [Skills](#Skills) - [Education](#Education) - [Contacts](#Contact)
-
+[Projects](#Projects) - [Skills](#Skills) - [Education](#Education) - [Contact](#Contact)
 ---
 
 ## Projects
