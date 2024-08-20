@@ -24,8 +24,8 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 - **Team:** Three programmers and three artists.
 - **Technologies Used:** Unity2D, DOTween and Input system.
 - SGA 2024 Game of the year nominee. ![](/Vesper/Images/SGA_GOYA.png)
-- [Vesper ITCH.IO](https://yrgo-game-creator.itch.io/vesper) ![](/Vesper/Images/.gif)
-
+- [Vesper ITCH.IO](https://yrgo-game-creator.itch.io/vesper)
+  ![](/Vesper/Images/.gif)
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
 
 ---
