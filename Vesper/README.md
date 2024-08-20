@@ -683,7 +683,7 @@ public class PlayerController : MonoBehaviour
 
 ### -  Vent movement
 The labyrinth movement or as we call it ventMovement came to us by accident. Which came to be one of the best experiences in the game.
-As with other player movement, I was also responsible for this one
+As with other player movement, I was also responsible for this one. It is a consist movement from point A to Z with the disability to stop inbetween. 
 
 ![now](/Vesper/Images/LabyrinthMovement.gif)
 
