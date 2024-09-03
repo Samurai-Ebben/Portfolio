@@ -57,7 +57,8 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Kat-boom)
 
 ---
-</detail>
+</details>
+
 ### Mjolnir's Might
   ![](/MjolnirsMight/Images/Recalling.gif)
 
