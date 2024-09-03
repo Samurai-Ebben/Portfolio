@@ -56,6 +56,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 ---
 <details >
           <summary>Other 2D Projects</summary>
+  
 ### A-B-C (Auto-Battling-Cards)
 
 ![](/ABC/Images/GamePlay3.gif)
