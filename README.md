@@ -31,7 +31,8 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
 
 ---
-
+<details >
+          <summary>Other 2D Projects</summary>
 ### A-B-C (Auto-Battling-Cards)
 
 ![](/ABC/Images/GamePlay3.gif)
@@ -56,7 +57,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Kat-boom)
 
 ---
-
+</detail>
 ### Mjolnir's Might
   ![](/MjolnirsMight/Images/Recalling.gif)
 
