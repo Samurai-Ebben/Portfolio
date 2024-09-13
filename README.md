@@ -17,7 +17,7 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 
 ### Vesper
 
-![Thumbnail](/Vesper/Images/vesper_thumbnail_16_9.png)
+![Thumbnail](/Vesper/Images/vesper_thumb_16_9.png)
 
 
 - A fast-paced 2D platformer about a formless being crashing on a planet and trying to find her way back to the sky.
