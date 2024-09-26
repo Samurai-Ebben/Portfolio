@@ -20,6 +20,8 @@ The drift mechanic was the toughest to implement. Not for the fact that i never 
 
 In *HellRacer*, we wanted to reward players for drifting, so I added a feature where drifting builds up a charge for a boost.
 
+Oh, and in case you haven’t noticed, there’s a giant eyeball in the background. I synced the leds animations—blinking and changing pupil colors—with the launcher sequence. After the launch, the eye flies to the starting line and just stares at the players when they get close, adding a bit of a creepy vibe!
+
 ![](/HellRacer/Images/Drifting.gif)
 
 <details>
