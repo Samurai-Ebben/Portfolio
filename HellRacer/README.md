@@ -18,6 +18,8 @@ A kart game involves numerous mechanics, but to ensure the gameplay is fun and e
 ### Ghost kart
 The ghost kart is the last best saved race of the player. It gives the player a challenge to break their own record or someone elses.
 
+![](/HellRacer/Images/Ghost.png)
+
 <details>
  
  <summary> GhostRecorder script</summary>
@@ -129,6 +131,11 @@ The ghost kart is the last best saved race of the player. It gives the player a 
 </details>
 
 --------------------------
+
+### The Launcher
+The launcher serves as a crucial component in any racing game, playing an integral role in enhancing gameplay dynamics. In this particular kart racing game, the launcher functions as a mini-game, where players must strategically accelerate, aligning the arrow with the green zone to achieve an optimal start advantage.
+
+![](/HellRacer/Images/Counter.gif)
 
 <details>
  <summary>Launcher script</summary>
