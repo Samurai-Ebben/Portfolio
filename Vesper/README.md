@@ -676,6 +676,7 @@ public class PlayerController : MonoBehaviour
   ```
 </details>
 I am aware of how long the script is. It gets the job done! However, i would do it differently now. I would make scriptable objects that store the attributes of each size and assign them deppinding on the chosen size.  
+
 --------------------------------------
 
 ### -  Vent movement
