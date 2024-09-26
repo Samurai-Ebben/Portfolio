@@ -8,9 +8,13 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ## Table of Contents
 . [Projects](#Projects)
+
 . [Skills](#Skills)
+
 . [Education](#Education)
+
 . [Contact](#Contact)
+
 ---
 
 ## Projects
