@@ -230,20 +230,17 @@ The launcher serves as a crucial component in any racing game, playing an integr
   {
   	Super::NativeTick(MyGeometry, InDeltaTime);
   
-  	// Call the indicator update method each tick
   	UpdateIndicatorPos();
   }
   
   void ULauncherUID::StartCountdown()
   {
   	bMiniGameActive = true;
-  	GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &ULauncherUID::UpdateCountdown, 1.0f, true);
-  	
+  	GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &ULauncherUID::UpdateCountdown, 1.0f, true);	
   }
   
   void ULauncherUID::UpdateCountdown()
   {
-  
   	AEyeCounter* EyeCounter = Cast<AEyeCounter>(EyeCounterActor);
   	if (EyeCounter)
   	{
@@ -272,7 +269,6 @@ The launcher serves as a crucial component in any racing game, playing an integr
   	}
   }
   
-  
   void ULauncherUID::FinishCountdown()
   {
   	bMiniGameActive = false;
@@ -280,7 +276,6 @@ The launcher serves as a crucial component in any racing game, playing an integr
   	TxtBlockTimer->SetText(FText::FromString("GO!"));
   	bCountdownFinish = true;
   	StopMiniGame();
-  
   }
   
   bool ULauncherUID::GetCountdownFinished()
@@ -290,7 +285,6 @@ The launcher serves as a crucial component in any racing game, playing an integr
   
   void ULauncherUID::UpdateIndicatorPos()
   {
-  	//if (!bMiniGameActive) return;
   	if (IndicatorRotation >= TargetZoneTolerance && IndicatorRotation <= TargetZoneCenter) {
   		APlayerController* PlayerController = GetWorld()->GetFirstPlayerController();
   		if (PlayerController) {
@@ -303,12 +297,12 @@ The launcher serves as a crucial component in any racing game, playing an integr
   			PlayerController->PlayDynamicForceFeedback(.0f, -1, false, true, false, true);
   		}
   	}
+
   	IndicatorRotation = FMath::Clamp(IndicatorRotation, -90, 90);
   	if (bPressingAcceleration) {
   		IndicatorRotation = FMath::Fmod(IndicatorRotation + IndicatorSpeed * 0.1f, 180.0f);
   	}
   	else {
-  
   		IndicatorRotation = FMath::Fmod(IndicatorRotation - IndicatorSpeed * 0.05f, 180.0f);
   	}
   
