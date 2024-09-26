@@ -4,11 +4,13 @@
 I am a passionate game developer focusing on gameplay programming, player mechanics, and AI.
 This repository showcases the projects I've worked on, highlighting my skills and experience in game development.
 
-
 ---
 
 ## Table of Contents
-[Projects](#Projects) - [Skills](#Skills) - [Education](#Education) - [Contact](#Contact)
+. [Projects](#Projects)
+. [Skills](#Skills)
+. [Education](#Education)
+. [Contact](#Contact)
 ---
 
 ## Projects
