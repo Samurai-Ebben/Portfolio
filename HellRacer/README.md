@@ -126,8 +126,9 @@ The ghost kart is the last best saved race of the player. It gives the player a 
        }
  ```
 
-<details/>
+</details>
 
+--------------------------
 
 <details>
  <summary>Launcher script</summary>
