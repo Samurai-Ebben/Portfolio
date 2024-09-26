@@ -14,3 +14,124 @@ Hell Racer is a single player kart game set in hell. You play as an imp and will
 
 ## Responsibilities
 A kart game involves numerous mechanics, but to ensure the gameplay is fun and exciting, the most crucial aspect is movement. Among these, the drifting mechanic stands out as particularly important. I was primarily responsible for developing this key drifting mechanic, along with creating the ghost system and a significant portion of the user interface (UI).
+
+<details>
+ <summar>GhostRecorder script</summar>
+
+
+ void AGhostRecorder::StartRecording()
+ {
+ 	RecordedData.Empty();
+ 	StartTime = GetWorld()->GetTimeSeconds();
+ 	bIsRecording = true;
+ 
+ 	GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AGhostRecorder::CaptureDataPoint, .40f, true);
+ }
+ 
+ void AGhostRecorder::StopRecording(bool IsHighScoreBrocken)
+ {
+ 
+ 	GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+ 
+ 	bIsRecording = false;
+ 
+ 	//Check if it is higher(less) than the highest score and then save it.
+ 	if (IsHighScoreBrocken) {
+ 		SaveToFile();
+ 	}
+ }
+ 
+ void AGhostRecorder::CaptureDataPoint()
+ {
+ 	if (!bIsRecording)
+ 		return;
+ 
+  	ACharacterInput* player = Cast<ACharacterInput>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+  	FGhostDataPoint DataPoint;
+  	DataPoint.Timestamp = GetWorld()->GetTimeSeconds() - StartTime;
+  	DataPoint.Position = player->GetActorLocation();
+  	DataPoint.Rotation = player->GetActorRotation();
+  	DataPoint.Velocity = player->VelocityFloat;
+  
+  	RecordedData.Add(DataPoint);
+ }
+ 
+ void AGhostRecorder::SaveToFile()
+ {
+ 	FString FileName = FString(TEXT("GhostData.json")); //The file where the data will be saved. Json cuz easier!
+ 	// Saving the data where the current project is located plus adding the data file
+ 	FString SavePath = FPaths::ProjectSavedDir() + FileName;
+ 	FString OutputString;
+ 	TSharedRef<TJsonWriter<>> DataWriter = TJsonWriterFactory<>::Create(&OutputString);
+ 	DataWriter->WriteObjectStart();
+ 	DataWriter->WriteArrayStart(TEXT("GhostPoints"));
+ 
+ 	for (const FGhostDataPoint& DataPoint : RecordedData)
+ 	{
+ 		DataWriter->WriteObjectStart();  // Start of a GhostDataPoint object
+ 		DataWriter->WriteValue(TEXT("Timestamp"), DataPoint.Timestamp);
+ 		DataWriter->WriteValue(TEXT("PositionX"), DataPoint.Position.X);
+ 		DataWriter->WriteValue(TEXT("PositionY"), DataPoint.Position.Y);
+ 		DataWriter->WriteValue(TEXT("PositionZ"), DataPoint.Position.Z);
+ 		DataWriter->WriteValue(TEXT("RotationYaw"), DataPoint.Rotation.Yaw);
+ 		DataWriter->WriteValue(TEXT("RotationPitch"), DataPoint.Rotation.Pitch);
+ 		DataWriter->WriteValue(TEXT("RotationRoll"), DataPoint.Rotation.Roll);
+ 		DataWriter->WriteValue(TEXT("Velocity"), DataPoint.Velocity);
+ 		DataWriter->WriteObjectEnd();  // MUST: End of a GhostDataPoint object
+ 	}
+ 
+ 	DataWriter->WriteArrayEnd();
+ 	DataWriter->WriteObjectEnd();
+ 	DataWriter->Close();
+ 
+ 	FFileHelper::SaveStringToFile(OutputString, *SavePath);
+ }
+ 
+ void AGhostRecorder::LoadFromFile()
+ {
+ 	FString FileName = FString(TEXT("GhostData.json"));
+ 	FString LoadPath = FPaths::ProjectSavedDir() + FileName;
+ 	FString ResString;
+ 
+ 	if (FFileHelper::LoadFileToString(ResString, *LoadPath))
+ 	{
+ 		TSharedPtr<FJsonObject> JsonObject;
+ 		// A reader this time. Everything read will be saved to the ResString
+ 		TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(ResString);
+ 
+ 		if (FJsonSerializer::Deserialize(Reader, JsonObject))
+ 		{
+ 			TArray<TSharedPtr<FJsonValue>> Points = JsonObject->GetArrayField(TEXT("GhostPoints"));
+ 
+ 			for (int32 i = 0; i < Points.Num(); i++)
+ 			{
+ 				TSharedPtr<FJsonObject> Point = Points[i]->AsObject();
+ 				FGhostDataPoint DataPoint;
+ 				DataPoint.Timestamp = Point->GetNumberField(TEXT("Timestamp"));
+ 				DataPoint.Position.X = Point->GetNumberField(TEXT("PositionX"));
+ 				DataPoint.Position.Y = Point->GetNumberField(TEXT("PositionY"));
+ 				DataPoint.Position.Z = Point->GetNumberField(TEXT("PositionZ"));
+ 				DataPoint.Rotation.Yaw = Point->GetNumberField(TEXT("RotationYaw"));
+ 				DataPoint.Rotation.Pitch = Point->GetNumberField(TEXT("RotationPitch"));
+ 				DataPoint.Rotation.Roll = Point->GetNumberField(TEXT("RotationRoll"));
+ 				DataPoint.Velocity = Point->GetNumberField(TEXT("Velocity"));
+ 
+ 				RecordedData.Add(DataPoint);
+ 			}
+ 		}
+ 	}
+ }
+ 
+ void AGhostRecorder::BeginPlay()
+ {
+ 	Super::BeginPlay();
+ 	CaptureDataPoint();
+ }
+ 
+ void AGhostRecorder::Tick(float DeltaTime)
+ {
+ 	Super::Tick(DeltaTime);
+ }
+
+
+<detail/>
