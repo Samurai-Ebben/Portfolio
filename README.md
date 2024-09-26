@@ -56,6 +56,19 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 <details >
           <summary>Other 2D Projects</summary>
   
+
+
+### Kat-boom
+![Thumbnail_katboom](/Kat-boom/Images/splashart.png)
+
+- A small project made in 4 days. A cat ghost looking for its yarnball to rest in peace.
+- My role in this project is Lead Programmer responsible for the player mechanics and gameplay.
+- **Technologies Used:** Unity and Lootlocker database.
+- [Katboom On Itch.IO](https://ebben.itch.io/katboom)
+
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Kat-boom)
+
+---
 ### A-B-C (Auto-Battling-Cards)
 
 ![](/ABC/Images/GamePlay3.gif)
@@ -69,17 +82,6 @@ I am a passionate game developer focusing on gameplay programming, player mechan
 
 ---
 
-### Kat-boom
-![Thumbnail_katboom](/Kat-boom/Images/splashart.png)
-
-- A small project made in 4 days. A cat ghost looking for its yarnball to rest in peace.
-- My role in this project is Lead Programmer responsible for the player mechanics and gameplay.
-- **Technologies Used:** Unity and Lootlocker database.
-- [Katboom On Itch.IO](https://ebben.itch.io/katboom)
-
-[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Kat-boom)
-
----
 </details>
 --- 
 
