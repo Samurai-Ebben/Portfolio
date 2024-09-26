@@ -37,7 +37,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 
 ### Mjolnir's Might
-  ![](/MjolnirsMight/Images/Recalling.gif)
+  ![](/MjolnirsMight/Images/Trhowingrecalling-ezgif.com-optimize.gif)
 
 -  Third-person game, Inspired by Thor and GOD Of War.
 -  A solo assignment in Yrgo. Made to test our abilities using Unreal.
