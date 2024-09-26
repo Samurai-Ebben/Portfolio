@@ -15,6 +15,74 @@ Hell Racer is a single player kart game set in hell. You play as an imp and will
 ## Responsibilities
 A kart game involves numerous mechanics, but to ensure the gameplay is fun and exciting, the most crucial aspect is movement. Among these, the drifting mechanic stands out as particularly important. I was primarily responsible for developing this key drifting mechanic, along with creating the ghost system and a significant portion of the user interface (UI).
 
+### Drift
+The drift mechanic was the toughest to implement. Not for the fact that i never actually drifted before. But because applying the *Centripetal force* and/or *centrifugal force* to a fake physics system for the acceleration of the car is tricky.
+In *HellRacer*, we wanted to reward players for drifting, so I added a feature where drifting builds up a charge for a boost.
+
+![](/HellRacer/Images/Drifting.gif)
+
+<details>
+ <summary>Drift</summary>
+
+ ```CPP
+void ACharacterInput::StartDrift(const FInputActionValue& Value)
+{
+	
+	if (!bDrifting && fabs(SteeringInput) > .96f) {
+		bDrifting = true;
+		MovementComponent->bIsDrifting = bDrifting;
+		DriftLockCounter = DriftLockTimer;
+
+		CurrentDrivingState = EDrivingState::S_Drifting;
+		InitialDriftDirection = GetActorForwardVector();
+
+		//Lerping from the current rotation to the desired one.
+		MovementComponent->WorldRotateSpeed = FMath::Lerp(MovementComponent->SetWorldRotationHighSpeed, 170, .5f);
+		InitialSteeringInput = SteeringInput;
+		MovementComponent->CharacterMovementComponent->GroundFriction = 3.8f;
+		DriftAudio->Play();
+
+		DriftSpark1Effect = UNiagaraFunctionLibrary::SpawnSystemAttached(DriftParticles, CarMesh, NAME_None,
+			FVector(-75.f, -50.f, 5.f), FRotator(0.F), EAttachLocation::SnapToTarget, true, true);
+
+		DriftSpark2Effect = UNiagaraFunctionLibrary::SpawnSystemAttached(DriftParticles, CarMesh, NAME_None,
+			FVector(-75.f, 50.f, 5.f), FRotator(0.F), EAttachLocation::SnapToTarget, true, true);
+	}
+}
+
+void ACharacterInput::StopDrift(const FInputActionValue& Value)
+{
+	if (CarIsMovingBackWard) { return; }
+
+	if (bDrifting)
+	{
+		bDrifting = false;
+		MovementComponent->WorldRotateSpeed = FMath::Lerp(150, MovementComponent->SetWorldRotationHighSpeed, .3f);
+		MovementComponent->CharacterMovementComponent->GroundFriction = 8.f;
+		MovementComponent->bIsDrifting = false;
+		DriftLockCounter = 0;
+		CurrentDrivingState = EDrivingState::S_Driving;
+		DriftComp->StopDrift();
+		DriftAudio->Stop();
+
+		DriftSpark2Effect->Deactivate();
+		DriftSpark1Effect->Deactivate();
+
+		if (bDriftBoostCharged) {
+			MovementComponent->AddBoostToVelocity(1830, 1830);
+			DriftBoostCounter = DriftBoostTimer;
+			bDriftBoosted = true;
+		}
+
+		DriftTimer = 0;
+		bDriftBoostCharged = false;
+	}
+}
+ ```
+</details>
+
+------ 
+
 ### Ghost kart
 The ghost kart is the last best saved race of the player. It gives the player a challenge to break their own record or someone elses.
 
