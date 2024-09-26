@@ -126,8 +126,148 @@ The ghost kart is the last best saved race of the player. It gives the player a 
        }
  ```
 
+<details/>
 
 
+<details>
+ <summary>Launcher script</summary>
+ 
+ ```CPP
+   void ULauncherUID::NativeConstruct()
+  {
+  	Super::NativeConstruct();
+  	bMiniGameActive = false;
+  	IndicatorRotation = -90.f;
+  	IndicatorSpeed = 30;
+  
+  	if (Indicator)
+  	{
+  		Indicator->SetRenderTransformAngle(IndicatorRotation);
+  	}
+  	FindEyeCounterActor();
+  	
+  
+  }
+  
+  void ULauncherUID::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
+  {
+  	Super::NativeTick(MyGeometry, InDeltaTime);
+  
+  	// Call the indicator update method each tick
+  	UpdateIndicatorPos();
+  }
+  
+  void ULauncherUID::StartCountdown()
+  {
+  	bMiniGameActive = true;
+  	GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &ULauncherUID::UpdateCountdown, 1.0f, true);
+  	
+  }
+  
+  void ULauncherUID::UpdateCountdown()
+  {
+  
+  	AEyeCounter* EyeCounter = Cast<AEyeCounter>(EyeCounterActor);
+  	if (EyeCounter)
+  	{
+  		EyeCounter->ChangeEyeTexture(Countdown - 1);
+  	}
+  
+  	if (Countdown > 0) {
+  		TxtBlockTimer->SetText(FText::AsNumber(Countdown));
+  		Countdown--;
+  	}
+  	else {
+  		Countdown = 0;
+  		EyeCounter->StopAnim();
+  		FinishCountdown();
+  	}
+  }
+  
+  void ULauncherUID::StopMiniGame()
+  {
+  	TargetZoneCenter = 70.0f;
+  	TargetZoneTolerance = 37.0f;
+  
+  	if (IndicatorRotation >= TargetZoneTolerance && IndicatorRotation <= TargetZoneCenter) {
+  		//Player gets A BOOOOOOOST!
+  		bTargetHit = true;
+  	}
+  }
+  
+  
+  void ULauncherUID::FinishCountdown()
+  {
+  	bMiniGameActive = false;
+  	GetWorld()->GetTimerManager().ClearTimer(TimerHandle);
+  	TxtBlockTimer->SetText(FText::FromString("GO!"));
+  	bCountdownFinish = true;
+  	StopMiniGame();
+  
+  }
+  
+  bool ULauncherUID::GetCountdownFinished()
+  {
+  	return ULauncherUID::bCountdownFinish;
+  }
+  
+  void ULauncherUID::UpdateIndicatorPos()
+  {
+  	//if (!bMiniGameActive) return;
+  	if (IndicatorRotation >= TargetZoneTolerance && IndicatorRotation <= TargetZoneCenter) {
+  		APlayerController* PlayerController = GetWorld()->GetFirstPlayerController();
+  		if (PlayerController) {
+  			PlayerController->PlayDynamicForceFeedback(.5f, .3f, false, true, false, true);
+  		}
+  	}
+  	else {
+  		APlayerController* PlayerController = GetWorld()->GetFirstPlayerController();
+  		if (PlayerController) {
+  			PlayerController->PlayDynamicForceFeedback(.0f, -1, false, true, false, true);
+  		}
+  	}
+  	IndicatorRotation = FMath::Clamp(IndicatorRotation, -90, 90);
+  	if (bPressingAcceleration) {
+  		IndicatorRotation = FMath::Fmod(IndicatorRotation + IndicatorSpeed * 0.1f, 180.0f);
+  	}
+  	else {
+  
+  		IndicatorRotation = FMath::Fmod(IndicatorRotation - IndicatorSpeed * 0.05f, 180.0f);
+  	}
+  
+  	if (Indicator)
+  	{
+  		Indicator->SetRenderTransformAngle(IndicatorRotation);
+  	}
+  }
+  
+  void ULauncherUID::RiseBar()
+  {
+  	bPressingAcceleration = true;
+  }
+  
+  bool ULauncherUID::TargetHit()
+  {
+  	return bTargetHit;
+  }
+  
+  void ULauncherUID::SetTargetHit(bool newVal) {
+  	bTargetHit = newVal;
+  }
+  
+  void ULauncherUID::LowerBar()
+  {
+  	bPressingAcceleration = false;
+  }
+  
+  void ULauncherUID::FindEyeCounterActor()
+  {
+  	EyeCounterActor = UGameplayStatics::GetActorOfClass(GetWorld(), AEyeCounter::StaticClass());
+  	if (!EyeCounterActor)
+  	{
+  		UE_LOG(LogTemp, Warning, TEXT("EyeCounter not found in the world."));
+  	}
+  }
+ ```
 
-
-<detail/>
+</details>
