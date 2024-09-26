@@ -27,7 +27,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 - A fast-paced 2D platformer about a formless being crashing on a planet and trying to find her way back to the sky.
 - **Team:** Three programmers and three artists.
 - **Technologies Used:** Unity2D, DOTween and Input system.
-- SGA 2024 Game of the year nominee. 
+- SGA 2024 Game of the year and Best Art nominee. 
 
 - [Vesper ITCH.IO](https://yrgo-game-creator.itch.io/vesper)
   
