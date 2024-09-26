@@ -16,7 +16,8 @@ Hell Racer is a single player kart game set in hell. You play as an imp and will
 A kart game involves numerous mechanics, but to ensure the gameplay is fun and exciting, the most crucial aspect is movement. Among these, the drifting mechanic stands out as particularly important. I was primarily responsible for developing this key drifting mechanic, along with creating the ghost system and a significant portion of the user interface (UI).
 
 ### Drift
-The drift mechanic was the toughest to implement. Not for the fact that i never actually drifted before. But because applying the *Centripetal force* and/or *centrifugal force* to a fake physics system for the acceleration of the car is tricky.
+The drift mechanic was the toughest to implement. Not for the fact that i never actually drifted before. But because applying the *Centripetal force* and/or *centrifugal force* to a fake physics system for the acceleration of the car is tricky. However, after iterating and taking many feedback from testers, The drift became better and granted a great experince for players.
+
 In *HellRacer*, we wanted to reward players for drifting, so I added a feature where drifting builds up a charge for a boost.
 
 ![](/HellRacer/Images/Drifting.gif)
