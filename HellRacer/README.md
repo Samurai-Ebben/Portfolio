@@ -460,3 +460,5 @@ Oh, and in case you haven’t noticed, there’s a giant eyeball in the backgrou
 ```
  
 </details>
+
+If I were to start over now with the same team, I’d definitely take a more object-oriented programming (OOP) approach. 
