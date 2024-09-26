@@ -16,7 +16,7 @@ Hell Racer is a single player kart game set in hell. You play as an imp and will
 A kart game involves numerous mechanics, but to ensure the gameplay is fun and exciting, the most crucial aspect is movement. Among these, the drifting mechanic stands out as particularly important. I was primarily responsible for developing this key drifting mechanic, along with creating the ghost system and a significant portion of the user interface (UI).
 
 <details>
- <summar>GhostRecorder script</summar>
+ <summary> GhostRecorder script</summary>
 
 
  void AGhostRecorder::StartRecording()
