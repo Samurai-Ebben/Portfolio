@@ -342,3 +342,120 @@ The launcher serves as a crucial component in any racing game, playing an integr
  ```
 
 </details>
+
+<details>
+	<summary>Eye Counter</summary>
+	
+```CPP
+ 		AEyeCounter::AEyeCounter()
+		{
+			// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+			PrimaryActorTick.bCanEverTick = true;
+			bShouldMove = false;
+			EyeMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("EyeMesh"));
+			EyeLock = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("EyeLock"));
+			DirectionIndicator = CreateDefaultSubobject<UArrowComponent>(TEXT("DirectionIndicator"));
+		
+			EyeLock->SetupAttachment(EyeMesh);
+			RootComponent = EyeMesh;
+			MoveSpeed = 200.0f;
+			DetectionRadius = 5000.0f;
+			TargetLocation = GetActorLocation();
+			CountdownAudio = CreateDefaultSubobject<UAudioComponent>("Countdown Audio Component");
+		
+		}
+		
+		// Called when the game starts or when spawned
+		void AEyeCounter::BeginPlay()
+		{
+			Super::BeginPlay();
+			if (EyeLock)
+			{
+				EyeLockAnimInstance = Cast<UEyeLockAnimInstance>(EyeLock->GetAnimInstance());
+				if (!EyeLockAnimInstance)
+				{
+					UE_LOG(LogTemp, Warning, TEXT("AnimInstance is null"));
+				}
+			}
+			PlayerActor = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+			EyeLockAnimInstance->EyeLockAnimationSpeed = 0.f;
+		
+		}
+		
+		// Called every frame
+		void AEyeCounter::Tick(float DeltaTime)
+		{
+			Super::Tick(DeltaTime);
+		
+			//if(bAnimate)
+				
+			if (bShouldMove)
+			{
+				FVector CurrentLocation = GetActorLocation();
+				FVector NewLocation = FMath::VInterpConstantTo(CurrentLocation, DirectionIndicator->GetComponentLocation(), DeltaTime, MoveSpeed);
+				SetActorLocation(NewLocation);
+		
+				// Stop moving if close enough to the target location
+				if (FVector::Dist(NewLocation, TargetLocation) < 1.0f)
+				{
+					bShouldMove = false;
+				}
+			}
+		
+			if (IsPlayerWithinRadius())
+			{
+				RotateToPlayer();
+			}
+		}
+		
+		void AEyeCounter::ChangeEyeTexture(int32 Index)
+		{
+			if (EyeLockAnimInstance)
+			{
+				EyeLockAnimInstance->EyeLockAnimationSpeed = 100.f;
+			}
+		
+			CountdownAudio->SetSound(CountdownSound);
+			CountdownAudio->Play();
+			if(Index >= 0 && Index < Materials.Num())
+				EyeMesh->SetMaterial(0, Materials[Index]);
+		}
+		
+		void AEyeCounter::StopAnim()
+		{
+			bAnimate = false;
+			bShouldMove = true;
+			EyeLockAnimInstance->EyeLockAnimationSpeed = 2;
+			EyeMesh->SetMaterial(0, Materials[2]);
+			CountdownAudio->Stop();
+		
+		}
+		
+		void AEyeCounter::MoveToLocation(FVector NewTargetLocation)
+		{
+			TargetLocation = NewTargetLocation;
+			bShouldMove = true;
+		}
+		
+		bool AEyeCounter::IsPlayerWithinRadius()
+		{
+			if (!PlayerActor) return false;
+		
+			float DistanceToPlayer = FVector::Dist(PlayerActor->GetActorLocation(), GetActorLocation());
+			return DistanceToPlayer <= DetectionRadius;
+		}
+		
+		void AEyeCounter::RotateToPlayer()
+		{
+			if (!PlayerActor) return;
+		
+			FVector DirectionToPlayer = PlayerActor->GetActorLocation() - GetActorLocation();
+			FRotator LookAtRotation = FRotationMatrix::MakeFromX(DirectionToPlayer).Rotator() - FRotator(0,90,0);
+			LookAtRotation.Pitch = 0.0f;
+			//LookAtRotation.Roll = 0.0f;
+		
+			SetActorRotation(FMath::RInterpTo(GetActorRotation(), LookAtRotation, GetWorld()->GetDeltaSeconds(), 5.0f));
+		}
+```
+ 
+</details>
