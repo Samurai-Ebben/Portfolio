@@ -51,8 +51,8 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ![](/HellRacer/Images/Thumbnail.png)
 
 -  Kart racing game, Inspired by Mario Kart.
--  A group assignment in Yrgo. Made to try out C++ alone.
 -  **Technologies Used:** Unreal Engine 5, C++ and its libraries.
+-  A group assignment in Yrgo. Made to try out C++ alone.
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/HellRacer)
 
