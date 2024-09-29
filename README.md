@@ -7,13 +7,13 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ---
 
 ## Table of Contents
-. [Projects](#Projects)
+- [Projects](#Projects)
 
-. [Skills](#Skills)
+- [Skills](#Skills)
 
-. [Education](#Education)
+- [Education](#Education)
 
-. [Contact](#Contact)
+- [Contact](#Contact)
 
 ---
 
