@@ -91,7 +91,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ## Skills
 
-- **Programming Languages:** C#, C++, Java and Python.
+- **Programming Languages:** C#, C++/AngelScript, Java and Python.
 - **Game Engines:** Unity, Unreal Engine.
 - Fast learner and adapts quickly to any situation.
 - Time/project management.
