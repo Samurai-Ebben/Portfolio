@@ -10,4 +10,4 @@ Over the course of this three-week project, I not only developed a system for th
 
 Furthermore, I experimented with shaders and materials to create the visual effects of thunder emanating from the hammer.
 
-My main objective *as always* is to provide the user the best game feel possible. I belive i have achived that in this small prototype.
+My primary objective, as always, is to deliver the best possible game-feel(Juice) for the user. I believe I have successfully achieved that in this small prototype.
