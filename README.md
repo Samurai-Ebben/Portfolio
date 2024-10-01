@@ -111,7 +111,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 - **Email:** abanalhindi47@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/abdalrhman-m-alhindi/
-- **Resume:** <a href="myFile.js" download> ![CV](/Vesper/Images/vesper_thumb_16_9.png) </a>
+- **Resume:** <a href="myFile.js" download> ![CV](/24GameDevCv.pdf) </a>
 
 Feel free to contact me to discuss potential collaborations or have any questions about my work!
 
