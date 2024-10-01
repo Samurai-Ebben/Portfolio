@@ -10,3 +10,4 @@ Over the course of this three-week project, I not only developed a system for th
 
 Furthermore, I experimented with shaders and materials to create the visual effects of thunder emanating from the hammer.
 
+My main objective *as always* is to provide the user the best game feel possible. I belive i have achived that in this small prototype.
