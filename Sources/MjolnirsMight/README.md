@@ -1,8 +1,8 @@
 # Mjolnir's Might 
 
-![](/MjolnirsMight/Images/Aim.png)    |  ![](/MjolnirsMight/Images/OpeningGate-ezgif.com-optimize.gif)
+![](/Sources/MjolnirsMight/Images/Aim.png)    |  ![](/Sources/MjolnirsMight/Images/OpeningGate-ezgif.com-optimize.gif)
 :-------------------------:|:-------------------------:
-![](/MjolnirsMight/Images/Trhowingrecalling-ezgif.com-optimize.gif)  | ![](/MjolnirsMight/Images/Recalling-ezgif.com-optimize.gif)
+![](/Sources/MjolnirsMight/Images/Trhowingrecalling-ezgif.com-optimize.gif)  | ![](/Sources/MjolnirsMight/Images/Recalling-ezgif.com-optimize.gif)
 
 The primary objective of this game project is to challenge myself and test my abilities by creating something entirely on my own. I have always found the throwing mechanic in God of War (Norse mythology) particularly intriguing, and I wanted to replicate that mechanic in my own way.
 
