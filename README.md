@@ -34,8 +34,14 @@ This repository showcases the projects I've worked on, highlighting my skills an
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
 
 ---
-### DEEPRESSURE 
+### DEEPRESSURE VR
   ![](/Sources/DEEPRESSURE/Images/Thumbnail.png)
+  
+-  Virtual reality game, Inspired by Iron lung.
+-  A programming project at Yrgo.
+-  **Technologies Used:** Unity 3D, C#, Shader Graphs, Meta vr.
+
+[Click for more!](https://github.com/Samurai-Ebben/Portflio/tree/DEEPRESSURE)
 
 ---
 
@@ -43,7 +49,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
   ![](/Sources/MjolnirsMight/Images/Trhowingrecalling-ezgif.com-optimize.gif)
 
 -  Third-person game, Inspired by Thor and GOD Of War.
--  A solo assignment in Yrgo. Made to test our abilities using Unreal.
+-  A solo project at Yrgo. Made to test our abilities using Unreal.
 -  **Technologies Used:** Unreal Engine 5, Blueprints, Niagara.
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/MjolnirsMight)
