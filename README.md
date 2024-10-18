@@ -113,7 +113,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 - **Email:** abanalhindi47@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/abdalrhman-m-alhindi/
-- **Resume:** <a href="/24GameDevCv.pdf" download> CV </a>
+- **Resume:** <a href="/Sources/24GameDevCv.pdf" download> CV </a>
 
 Feel free to contact me to discuss potential collaborations or have any questions about my work! 
 And consider downloading my CV if you are intersted in hiring me!
