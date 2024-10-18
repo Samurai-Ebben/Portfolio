@@ -21,7 +21,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ### Vesper
 
-![Thumbnail](/Vesper/Images/vesper_thumb_16_9.png)
+![Thumbnail](/Sources/Vesper/Images/vesper_thumb_16_9.png)
 
 
 - A fast-paced 2D platformer about a formless being crashing on a planet and trying to find her way back to the sky.
@@ -39,7 +39,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ---
 
 ### Mjolnir's Might
-  ![](/MjolnirsMight/Images/Trhowingrecalling-ezgif.com-optimize.gif)
+  ![](/Sources/MjolnirsMight/Images/Trhowingrecalling-ezgif.com-optimize.gif)
 
 -  Third-person game, Inspired by Thor and GOD Of War.
 -  A solo assignment in Yrgo. Made to test our abilities using Unreal.
@@ -50,7 +50,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ---
 
 ### Hell Racer
-![](/HellRacer/Images/Thumbnail.png)
+![](/Sources/HellRacer/Images/Thumbnail.png)
 
 -  Kart racing game, Inspired by Mario Kart.
 -  **Technologies Used:** Unreal Engine 5, C++ and its libraries.
@@ -65,7 +65,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 
 ### Kat-boom
-![Thumbnail_katboom](/Kat-boom/Images/splashart.png)
+![Thumbnail_katboom](/Sources/Kat-boom/Images/splashart.png)
 
 - A small project made in 4 days. A cat ghost looking for its yarnball to rest in peace.
 - My role in this project is Lead Programmer responsible for the player mechanics and gameplay.
@@ -77,7 +77,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ---
 ### A-B-C (Auto-Battling-Cards)
 
-![](/ABC/Images/GamePlay3.gif)
+![](/Sources/ABC/Images/GamePlay3.gif)
 
 -  A simple mobile online auto battle, card game with a twist.
 -  A solo assignment in Yrgo. Made to test our abilities using database.
