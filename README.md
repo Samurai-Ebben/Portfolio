@@ -1,7 +1,7 @@
 
 # Ebben's Game Development Portfolio
 
-I am a passionate game developer focusing on gameplay programming, player mechanics, and AI.
+I am a passionate game developer focusing on gameplay programming, player mechanics, and AI. As well as experienced with shaders, UI, Editor tools and systems.
 This repository showcases the projects I've worked on, highlighting my skills and experience in game development.
 
 ---
@@ -34,7 +34,9 @@ This repository showcases the projects I've worked on, highlighting my skills an
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
 
 ---
+### DEEPRESSURE 
 
+---
 
 ### Mjolnir's Might
   ![](/MjolnirsMight/Images/Trhowingrecalling-ezgif.com-optimize.gif)
