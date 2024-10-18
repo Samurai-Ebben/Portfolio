@@ -35,6 +35,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ---
 ### DEEPRESSURE 
+  ![](/Sources/Deepressure/Images/Thumbnail.png)
 
 ---
 
