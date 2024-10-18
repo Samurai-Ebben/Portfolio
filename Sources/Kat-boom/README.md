@@ -1,7 +1,7 @@
 #                                                             Kat-boom
 
 
-![](/Kat-boom/Images/GhostMode.gif)    |  ![](/Kat-boom/Images/Movement.gif)
+![](/Sources/Kat-boom/Images/GhostMode.gif)    |  ![](/Sources/Kat-boom/Images/Movement.gif)
 :-------------------------:|:-------------------------:
 
 ## Summary of the project
