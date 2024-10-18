@@ -1,9 +1,9 @@
 ![uC_5K4](https://github.com/Samurai-Ebben/Portflio/assets/71189461/c558950a-43bb-4c30-9fd4-10eb1c9613a2)
 
 
-![](/Vesper/Images/Screenshot2024-01-04145910.png)    |  ![](/Vesper/Images/3G5X+H.png)
+![](/Sources/Vesper/Images/Screenshot2024-01-04145910.png)    |  ![](/Sources/Vesper/Images/3G5X+H.png)
 :-------------------------:|:-------------------------:
-![](/Vesper/Images/vesper_trailer_v2.gif)              |  ![](/Vesper/Images/Screenshot2024-01-04150218.png)
+![](/Sources/Vesper/Images/vesper_trailer_v2.gif)              |  ![](/Sources/Vesper/Images/Screenshot2024-01-04150218.png)
 
 
 ## Summary of the project
@@ -19,11 +19,11 @@ As a 2D fast-paced platformer, one of the most important main mechanics is the
 ### -  Player Movement
 Of course, the player movement consumed most of my time to perfect it in a way that was as smooth as it is now;
 this is how it began.
-![before](/Vesper/Images/1stWeekMovement.gif)
+![before](/Sources/Vesper/Images/1stWeekMovement.gif)
 
 However, after hard work and better code implementation;
 
-![now](/Vesper/Images/nowMovement.gif)
+![now](/Sources/Vesper/Images/nowMovement.gif)
 
 The Player mechanics are the largest mechanic in the game. I covered the movement part, focusing on the input precision and the difference in 
 stats of each size the player character has (Three: <Big, Medium, Small>).
@@ -683,7 +683,7 @@ I am aware of how long the script is. It gets the job done! However, I would do 
 The labyrinth movement or as we call it ventMovement came to us by accident. Which came to be one of the best experiences in the game.
 As with other player movement, I was also responsible for this one. It is a constent movement from point A to Z with the disability to *stop* inbetween, but you can redirect. 
 
-![now](/Vesper/Images/LabyrinthMovement.gif)
+![now](/Sources/Vesper/Images/LabyrinthMovement.gif)
 
 
 <details>
