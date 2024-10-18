@@ -1,8 +1,8 @@
 ![Hell_Racer_logo.png](/HellRacer/Images/Hell_Racer_logo.png)
 
-![](/HellRacer/Images/Ghost.png)    |  ![](/HellRacer/Images/Counter.gif)
+![](/Sources/HellRacer/Images/Ghost.png)    |  ![](/Sources/HellRacer/Images/Counter.gif)
 :-------------------------:|:-------------------------:
- ![](/HellRacer/Images/Drifting.gif) | ![](/HellRacer/Images/Driving.png)
+ ![](/Sources/HellRacer/Images/Drifting.gif) | ![](/Sources/HellRacer/Images/Driving.png)
 ## Summary of the project
 Hell Racer is a single player kart game set in hell. You play as an imp and will race the ghost of your own racing lap records. 
 Hell Racer was an 8 weeks game project in Yrgo developed by 8 members. The 4 programmers wanted to experince in making a game in Unreal Engine 5 using only C++.
@@ -19,7 +19,7 @@ The drift mechanic was the toughest to implement. Not for the fact that i never 
 In *HellRacer*, we wanted to reward players for drifting, so I added a feature where drifting builds up a charge for a boost.
 
 
-![](/HellRacer/Images/Drifting.gif)
+![](/Sources/HellRacer/Images/Drifting.gif)
 
 <details>
  <summary>Drift</summary>
@@ -86,7 +86,7 @@ void ACharacterInput::StopDrift(const FInputActionValue& Value)
 ### Ghost kart
 The ghost kart is the last best saved race of the player. It gives the player a challenge to break their own record or someone elses.
 
-![](/HellRacer/Images/Ghost.png)
+![](/Sources/HellRacer/Images/Ghost.png)
 
 <details>
  
@@ -205,7 +205,7 @@ The launcher serves as a crucial component in any racing game, playing an integr
 
 Oh, and in case you haven’t noticed, there’s a giant eyeball in the background. I synced the leds animations—blinking and changing pupil colors—with the launcher sequence. After the launch, the eye flies to the starting line and just stares at the players when they get close, adding a bit of a creepy vibe!
 
-![](/HellRacer/Images/Counter.gif)
+![](/Sources/HellRacer/Images/Counter.gif)
 
 <details>
  <summary>Launcher script</summary>

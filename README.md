@@ -31,7 +31,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 - [Vesper ITCH.IO](https://yrgo-game-creator.itch.io/vesper)
   
-[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Vesper)
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/Vesper)
 
 ---
 ### DEEPRESSURE VR
@@ -41,7 +41,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 -  A programming project at Yrgo.
 -  **Technologies Used:** Unity 3D, C#, Shader Graphs, Meta vr.
 
-[Click for more!](https://github.com/Samurai-Ebben/Portflio/tree/DEEPRESSURE)
+[Click for more!](https://github.com/Samurai-Ebben/Portflio/tree/Sources/DEEPRESSURE)
 
 ---
 
@@ -52,7 +52,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 -  A solo project at Yrgo. Made to test our abilities using Unreal.
 -  **Technologies Used:** Unreal Engine 5, Blueprints, Niagara.
 
-[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/MjolnirsMight)
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/MjolnirsMight)
 
 ---
 
@@ -63,7 +63,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 -  **Technologies Used:** Unreal Engine 5, C++ and its libraries.
 -  A group assignment in Yrgo. Made to try out C++ alone.
 
-[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/HellRacer)
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/HellRacer)
 
 ---
 <details >
@@ -79,7 +79,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 - **Technologies Used:** Unity and Lootlocker database.
 - [Katboom On Itch.IO](https://ebben.itch.io/katboom)
 
-[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Kat-boom)
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/Kat-boom)
 
 ---
 ### A-B-C (Auto-Battling-Cards)
@@ -91,7 +91,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 -  **Technologies Used:** Unity, DOTween, Firebase, Shader graph system.
 
 
-[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/ABC)
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/ABC)
 
 ---
 
