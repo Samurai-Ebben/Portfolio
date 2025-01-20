@@ -49,13 +49,13 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ---
 
 ### EBBEN RING
-  ![](/Sources/MjolnirsMight/Images/Trhowingrecalling-ezgif.com-optimize.gif)
+  ![](/Sources/Ebben-Ring/Images/TitleScreen2.png)
 
--  Third-person game, Inspired by Thor and GOD Of War.
--  A solo project at Yrgo. Made to test our abilities using Unreal.
--  **Technologies Used:** Unreal Engine 5, Blueprints, Niagara.
+-  Third-person, souls-like, melee combat, Inspired by ELDEN RING.
+-  Made by a small team of three programmers. 
+-  **Technologies Used:** Unreal Engine 5, Blueprints, Niagara and **Angelscript**.
 
-[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/MjolnirsMight)
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/Ebben-Ring)
 
 ---
 <details><Summary>More games...</Summary>
