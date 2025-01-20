@@ -48,6 +48,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ---
 <details><Summary>More games...</Summary>
+  
 ### Hell Racer
 ![](/Sources/HellRacer/Images/Thumbnail.png)
 
