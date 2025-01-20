@@ -33,15 +33,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
   
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/Vesper)
 
----
-### DEEPRESSURE VR
-  ![](/Sources/DEEPRESSURE/Images/Thumbnail.png)
-  
--  Virtual reality game, Inspired by Iron lung.
--  A programming project at Yrgo.
--  **Technologies Used:** Unity 3D, C#, Shader Graphs, Meta vr.
 
-[Click for more!](https://github.com/Samurai-Ebben/Portflio/tree/Sources/DEEPRESSURE)
 
 ---
 
@@ -55,7 +47,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/MjolnirsMight)
 
 ---
-
+<details><Summary>More games...</Summary>
 ### Hell Racer
 ![](/Sources/HellRacer/Images/Thumbnail.png)
 
@@ -66,10 +58,16 @@ This repository showcases the projects I've worked on, highlighting my skills an
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/HellRacer)
 
 ---
-<details >
-          <summary>Other 2D Projects</summary>
+### DEEPRESSURE VR
+  ![](/Sources/DEEPRESSURE/Images/Thumbnail.png)
   
+-  Virtual reality game, Inspired by Iron lung.
+-  A programming project at Yrgo.
+-  **Technologies Used:** Unity 3D, C#, Shader Graphs, Meta vr.
 
+[Click for more!](https://github.com/Samurai-Ebben/Portflio/tree/Sources/DEEPRESSURE)
+
+---
 
 ### Kat-boom
 ![Thumbnail_katboom](/Sources/Kat-boom/Images/splashart.png)
@@ -92,17 +90,16 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/ABC)
-
----
-
 </details>
+
+
 --- 
 
 ## Skills
 
-- **Programming Languages:** C#, C++/AngelScript, Java and Python.
+- **Programming Languages:** C#, C++, Java, Python and AngelScript.
 - **Game Engines:** Unity, Unreal Engine.
-- Fast learner and adapts quickly to any situation.
+- Fast learner and adapts quickly to any situation and work enviorment.
 - Time/project management.
 - Multitasker
 - Problem solver: Finding the problem is half of the solution.
