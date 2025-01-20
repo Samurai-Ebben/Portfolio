@@ -47,6 +47,17 @@ This repository showcases the projects I've worked on, highlighting my skills an
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/MjolnirsMight)
 
 ---
+
+### EBBEN RING
+  ![](/Sources/MjolnirsMight/Images/Trhowingrecalling-ezgif.com-optimize.gif)
+
+-  Third-person game, Inspired by Thor and GOD Of War.
+-  A solo project at Yrgo. Made to test our abilities using Unreal.
+-  **Technologies Used:** Unreal Engine 5, Blueprints, Niagara.
+
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/MjolnirsMight)
+
+---
 <details><Summary>More games...</Summary>
   
 ### Hell Racer
