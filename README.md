@@ -19,7 +19,11 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ## Game Projects
 
-### Vesper
+### ECLIPSIUM (more details coming soon ...)
+
+---
+
+### VESPER
 
 ![Thumbnail](/Sources/Vesper/Images/vesper_thumb_16_9.png)
 
