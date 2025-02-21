@@ -24,6 +24,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ![Thumbnail](/Sources/Eclipsium/Images/EclipsiumLogo.png)
 - My role: Programmer intern, programmed systems and gameplay mechanics
 
+- [ECLIPSIUM _ Steam](https://store.steampowered.com/app/2419670/Eclipsium/) 
 ---
 
 ### VESPER
