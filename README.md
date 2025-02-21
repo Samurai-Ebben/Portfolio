@@ -21,6 +21,8 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ### ECLIPSIUM (more details coming soon ...)
 
+![Thumbnail](/Sources/Eclispsium/Screenshot 2025-02-21 155111.png)
+
 ---
 
 ### VESPER
