@@ -19,9 +19,10 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ## Game Projects
 
-### ECLIPSIUM (more details coming soon ...)
+### ECLIPSIUM
 
-![Thumbnail](/Sources/Eclispsium/EclipsiumLogo.png)
+![Thumbnail](/Sources/Eclipsium/Images/EclipsiumLogo.png)
+- My role: Programmer intern, programmed systems and gameplay mechanics
 
 ---
 
