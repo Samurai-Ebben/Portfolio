@@ -44,7 +44,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ---
 
-## Programming Projects
+## Programming-Focused Projects
 
 ### Mjolnir's Might
   ![](/Sources/MjolnirsMight/Images/Trhowingrecalling-ezgif.com-optimize.gif)
