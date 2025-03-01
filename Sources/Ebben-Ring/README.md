@@ -1,6 +1,6 @@
 ![](/Sources/Ebben-Ring/Images/TitleScreen2.png)
 
-![](/Sources/Ebben-Ring/Images/comboSystem.gif)    |  ![](/Sources/Ebben-Ring/Images/3G5X+H.png)
+![](/Sources/Ebben-Ring/Images/comboSystem.gif)    |  ![](/Sources/Ebben-Ring/Images/TogglingLocks.gif)
 :-------------------------:|:-------------------------:
 ![](/Sources/Ebben-Ring/Images/vesper_trailer_v2.gif)              |  ![](/Sources/Ebben-Ring/Images/Screenshot2024-01-04150218.png)
 
