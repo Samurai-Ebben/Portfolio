@@ -6,32 +6,29 @@
 
 
 ## About the project
-This project was made only for the purpose of learning and education, In Yrgo for 7 weeks.
-EBBEN RING is a 3D Souls-like game developed in Unreal Engine 5 (UE5) using *AngelScript*. This project embodies the core principles of a challenging and immersive action RPG, drawing inspiration from the iconic Soulsborne genre. It features precise combat, deep player mechanics, and a dynamic environment that engages players in strategic and skill-based gameplay. One great limitation i faced during the development was animations. However, i animated some small sequances and made up for it with vfx and good game feel.
+This project was developed solely for learning and educational purposes at Yrgo over a span of 7 weeks. EBBEN RING is a 3D Souls-like game built in Unreal Engine 5 (UE5) using AngelScript. It embodies the core principles of a challenging and immersive action RPG, drawing inspiration from the iconic Soulsborne genre. The game features precise combat, robust player mechanics, and a dynamic environment that rewards strategic, skill-based gameplay. One significant challenge I encountered was with animations; however, I compensated by animating a few short sequences and enhancing the overall experience with compelling visual effects and excellent game feel.
 
 
 ## Core Features
-Souls-like Combat System:
+Souls-like Combat System
+Responsive Attacks: Emphasizes timing and strategy.
+Dynamic Combo System: Rewards skilled input and seamless transitions between moves.
+Tactical Damage Mechanics: Balances damage for both the player and enemies.
+Unique Player Abilities: Enhances combat variety and utility.
 
-- Responsive attacks with timing and strategy as key elements.
-- Dynamic combo system that rewards skilled input and fluid transitions between moves.
-- Damage mechanics for both the player and enemies, ensuring tactical gameplay.
-- Player abilities designed to enhance combat variety and utility.
+## Player Mechanics
+Designed and implemented entirely in AngelScript, the player mechanics deliver lightweight, efficient, and highly customizable functionality. Key features include:
 
-## Player Mechanics:
-
-Designed and implemented entirely in AngelScript, delivering lightweight, efficient, and highly customizable functionality.
-
-Features include:
-- Attacking and damage dealing.
-- Taking damage with stagger mechanics and recovery windows.
-- A fluid combo system that adapts to player timing and enhances gameplay depth.
-- Unique player abilities that can turn the tide of battle.
-- Directional rolls and input buffering
+Attacking & Damage Dealing
+Stagger Mechanics & Recovery Windows: Provides realistic damage feedback.
+Fluid Combo System: Adapts to player timing for enhanced gameplay depth.
+Special Abilities: Can turn the tide of battle.
+Directional Rolls & Input Buffering
+Player State Switching using an FSM: A Finite State Machine (FSM) was implemented to ensure seamless transitions between animations.
 
 ### Switching players states using FSM
-Switching between states was something i struggled with early on in the development of the combat system. The player could cancle any animation with another.
-in order to control that in seamless way a State machine using the FSM (Finite State machine) was created with events called in every system to control how the player should exit and enter the previous and next animation respectively.
+
+Switching between states was challenging early on in the combat system development because animations could be canceled arbitrarily. To address this, I created an FSM that triggers events for a controlled exit from the current animation and entry into the next. Below is an excerpt of the FSM player state controller:
 
 <details>
   <Summary>FSM Player state controller</Summary>
@@ -158,10 +155,7 @@ class UPlayerStateManager: UActorComponent{
 
 ### The Directional Roll
 
-The directional roll is one of my faviorate things in a combat game, and it was one of my faviorate mechanics to develop. 
-In a souls-like game the roll is a "roll" only when the player has a direction inputed, otherwise it is consodered a hop back to dodge attacks.
-Additionally the player becoms invincible for some attacks during a very short period in the beginning of the roll animation.
-the code snippet implements and calculate the directions of the perfect roll the player needs to dodge and avoid deadly attacks.
+The directional roll is one of my favorite mechanics to develop in a combat game. In a Souls-like title, a roll is considered valid only when the player provides directional input; otherwise, it functions as a simple hop back to dodge attacks. Additionally, the player becomes briefly invincible at the start of the roll animation. The following code snippet demonstrates how I calculate the ideal roll direction to help the player dodge and avoid deadly attacks:
 
 ![](/Sources/Ebben-Ring/Images/DireRolls.gif) 
 
@@ -286,9 +280,9 @@ class URollComponent: UActorComponent{
 </details>
 
 
-### The Lock-On 
-Locking on an enemy, should be a helpful ability for the player. Used to target one enemy and focus all of the player's attacks on.
-To make such ability the lock-on system should lock the player's direction to the target, that is simple enough. The hard part is toggling between the available enemies without getting issues.
+### The Lock-On
+
+Locking on to an enemy is a vital ability that allows the player to focus all attacks on a single target. While the basic concept of aligning the player’s direction to the target is straightforward, the challenge lies in seamlessly toggling between multiple enemies. The following snippet highlights the core calculations for the lock-on system:
 
 ![](/Sources/Ebben-Ring/Images/TogglingLocks.gif)
 
