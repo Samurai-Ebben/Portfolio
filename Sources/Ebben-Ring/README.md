@@ -27,3 +27,5 @@ Features include:
 - Taking damage with stagger mechanics and recovery windows.
 - A fluid combo system that adapts to player timing and enhances gameplay depth.
 - Unique player abilities that can turn the tide of battle.
+- Directional rolls and input buffering
+  
