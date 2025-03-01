@@ -2,7 +2,7 @@
 
 ![](/Sources/Ebben-Ring/Images/comboSystem.gif)    |  ![](/Sources/Ebben-Ring/Images/TogglingLocks.gif)
 :-------------------------:|:-------------------------:
-![](/Sources/Ebben-Ring/Images/DireRolls.gif)       |  ![](/Sources/Ebben-Ring/Images/Screenshot2024-01-04150218.png)
+![](/Sources/Ebben-Ring/Images/DireRolls.gif)       |  ![](/Sources/Ebben-Ring/Images/DashAbility.gif)
 
 
 ## About the project
