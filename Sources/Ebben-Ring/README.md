@@ -2,7 +2,7 @@
 
 ![](/Sources/Ebben-Ring/Images/comboSystem.gif)    |  ![](/Sources/Ebben-Ring/Images/TogglingLocks.gif)
 :-------------------------:|:-------------------------:
-![](/Sources/Ebben-Ring/Images/vesper_trailer_v2.gif)              |  ![](/Sources/Ebben-Ring/Images/Screenshot2024-01-04150218.png)
+![](/Sources/Ebben-Ring/Images/DireRolls.gif)       |  ![](/Sources/Ebben-Ring/Images/Screenshot2024-01-04150218.png)
 
 
 ## About the project
