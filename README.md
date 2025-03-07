@@ -22,7 +22,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ### ECLIPSIUM
 
 ![Thumbnail](/Sources/Eclipsium/Images/EclipsiumLogo.png)
-- My role: Programmer intern, programmed systems and gameplay mechanics
+- My role: Programmer intern, programmed systems, tools, gameplay mechanics and player mechanics
 
 - [ECLIPSIUM _ Steam](https://store.steampowered.com/app/2419670/Eclipsium/) 
 ---
