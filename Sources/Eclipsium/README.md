@@ -6,5 +6,7 @@ One of the tasks I got, was to make a puzzle mechanics. I followed the instructi
 ![](/Sources/Eclipsium/Images/Tendrils.gif) 
 ![](/Sources/Eclipsium/Images/tendrilsControls.png) 
 ![](/Sources/Eclipsium/Images/deformingPlane.gif) 
+![](/Sources/Eclipsium/Images/ConveyorSpline.png) 
+![](/Sources/Eclipsium/Images/Conveyors.gif) 
 
 another task was rework of darknes consuming the player. I also added tentacals
