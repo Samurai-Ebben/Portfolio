@@ -11,3 +11,4 @@ One of the tasks I got, was to make a puzzle mechanics. I followed the instructi
 
 another task was rework of darknes consuming the player. I also added tentacals
 I created a custom spline controller. in order to make smoother curves that the spline in Unity doesn't provide. also make it easier to adjust, add curves and remove the last added curve easily with a press of a button
+![](/Sources/Eclipsium/Images/CustomSpline.png) 
