@@ -11,9 +11,9 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 - [Skills](#Skills)
 
-- [Education](#Education)
+[Education](#Education)
 
-- [Contact](#Contact)
+[Contact](#Contact)
 
 ---
 
