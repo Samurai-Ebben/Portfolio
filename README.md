@@ -11,9 +11,9 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 - [Skills](#Skills)
 
-[Education](#Education)
+- [Education](#Education)
 
-[Contact](#Contact)
+- [Contact](#Contact)
 
 ---
 
@@ -23,9 +23,10 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ![Thumbnail](/Sources/Eclipsium/Images/EclipsiumLogo.png)
 - My role: Programmer intern, engineered systems, tools, gameplay mechanics and player mechanics
-- [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/Eclipsium)
+[click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/Eclipsium)
 
-- [ECLIPSIUM _ Steam](https://store.steampowered.com/app/2419670/Eclipsium/) 
+[ECLIPSIUM _ Steam](https://store.steampowered.com/app/2419670/Eclipsium/) 
+
 ---
 
 ### VESPER
