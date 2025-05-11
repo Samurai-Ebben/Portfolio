@@ -149,7 +149,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 - **Email:** abdalrahman.alhindi48@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/abdalrhman-m-alhindi/
-- **Resume:** <a href="/Sources/DevCV25.pdf" download> CV </a>
+- **Resume:** <a href="/Sources/CV25.pdf" download> CV </a>
 
 Feel free to contact me to discuss potential collaborations or have any questions about my work! 
 And consider downloading my CV if you are intersted in hiring me!
