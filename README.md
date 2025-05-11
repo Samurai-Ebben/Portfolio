@@ -22,8 +22,9 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ### ECLIPSIUM
 
 ![Thumbnail](/Sources/Eclipsium/Images/EclipsiumLogo.png)
-- My role: Programmer intern, engineered systems, tools, gameplay mechanics and player mechanics.
-
+- **Team**: Housefire games studio. Worked closely with desginers and artists.
+- **Technologies**: Unity, C#, custom Tools and editor scripting.
+- Optimized game by 30%, modified old systems and created new gameplay and tools.
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/Eclipsium)
 
