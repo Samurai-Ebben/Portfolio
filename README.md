@@ -25,11 +25,11 @@ This repository showcases the projects I've worked on, highlighting my skills an
 - **Team**: Housefire games studio. Worked closely with desginers and artists.
 - **Technologies**: Unity, C#, custom Tools and editor scripting.
 - Optimized game by 30%, modified old systems and created new gameplay and tools.
+- [ECLIPSIUM _ Steam](https://store.steampowered.com/app/2419670/Eclipsium/) 
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/Eclipsium)
 
 
-[ECLIPSIUM _ Steam](https://store.steampowered.com/app/2419670/Eclipsium/) 
 
 ---
 
