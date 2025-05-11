@@ -125,9 +125,14 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ## Skills
 
 - **Programming Languages:** C#, C++, Java, Python and AngelScript.
-- **Game Engines:** Unity, Unreal Engine.
+    - I belive learning new languages can allow me to view programming from different prespectives.
+- **Game Engines:** Unity, Unreal Engine4/5.
 - Fast learner and adapts quickly to any situation and work enviorment.
+    - e.g., during my internship at Housefire, there was stress at first and I needed to understand most of their codebase in a week to start working on new tasks.
+    - during that week I found problems with footsteps sounds, so i optimized and modified the script so it works better on new and old surfaces.
 - Time/project management.
+    - e.g., I took two parallel programs (Högskolan i Skövde and Yrgo) at the same time. In Addition I lived two hourse away from Yrgo.
+    - With dedicated time managment I gained great grades at Yrgo while also finishing the first and half years of the university. 
 - Multitasker
 - Problem solver: Finding the problem is half of the solution.
 
@@ -135,14 +140,14 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ## Education
 
 - High vocational Studies in Game Creator Programmer - Yrgo, 2025
-- Computer Science: system development - Högskolan I Skövde, 2026
+- Computer Science: system development - Högskolan i Skövde, 2025
 - Unity junior programmer [Certification](https://www.credly.com/badges/b8378b37-06ee-4570-a708-e0825a83b21f/public_url)
 
 ![unity-junior-programmer](https://github.com/Samurai-Ebben/Portfolio/assets/71189461/335d9e9c-2a31-40c2-b707-aedfcae258bc)
 
 ## Contact
 
-- **Email:** abanalhindi47@gmail.com
+- **Email:** abdalrahman.alhindi48@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/abdalrhman-m-alhindi/
 - **Resume:** <a href="/Sources/DevCV25.pdf" download> CV </a>
 
