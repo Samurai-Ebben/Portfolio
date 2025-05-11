@@ -22,7 +22,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ### ECLIPSIUM
 [Steam](https://store.steampowered.com/app/2419670/Eclipsium/) 
 
-![Thumbnail](/Sources/Eclipsium/Images/EclipsiumLogo.png)
+![Thumbnail](/Sources/Eclipsium/Images/header.jpg)
 - **Team**: Housefire games studio. Worked closely with desginers and artists.
 - **Technologies**: Unity, Tools and editor scripting, Scriptable Objects, Object pooling.
 - Optimized game by 30%, modified old systems and created new gameplay and tools.
