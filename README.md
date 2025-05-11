@@ -35,7 +35,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 ### VESPER
 
-![Thumbnail](/Sources/Vesper/Images/vesper_thumb_16_9.png)
+![Thumbnail](/Sources/Vesper/Images/vesper_thumbnail.png)
 
 
 - A fast-paced 2D platformer about a formless being crashing on a planet and trying to find her way back to the sky.
