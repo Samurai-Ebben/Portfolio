@@ -1,8 +1,9 @@
 # Eclipsium
+(*I have signed an NDA on this project what i am sharing is everything i am allowed to, there are more things i have done during this project*)
 
 At Housefire Games, I partnered with game designers, artists, and senior engineers to architect, optimize, and elevate core systems, gameplay mechanics, and development tools. To deliver and launch their debut game ECLIPSIUM
 
-### Puzzle-Sync Mechanics
+### Spline-Sync Mechanics
 
 Objective: Create a seamless mechanic that ties together two distinct “body forms” (e.g. miniture planet and planet) so that player inputs and environmental interactions remain fluid when transitioning.
 
@@ -33,7 +34,7 @@ Results
 --- 
 
 
-### Darkness “Consumption” Rework & Tentacle Effects
+### Shader “Consumption” Rework & Effects
 Objective: Overhaul the original “darkness” damage-over-time effect and enhance it with tentacle visuals for a more menacing feel.
 
 **Core Gameplay Tuning**
