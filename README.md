@@ -20,12 +20,12 @@ This repository showcases the projects I've worked on, highlighting my skills an
 ## Game Projects
 
 ### ECLIPSIUM
+[Steam](https://store.steampowered.com/app/2419670/Eclipsium/) 
 
 ![Thumbnail](/Sources/Eclipsium/Images/EclipsiumLogo.png)
 - **Team**: Housefire games studio. Worked closely with desginers and artists.
-- **Technologies**: Unity, C#, custom Tools and editor scripting.
+- **Technologies**: Unity, Tools and editor scripting, Scriptable Objects, Object pooling.
 - Optimized game by 30%, modified old systems and created new gameplay and tools.
-- [ECLIPSIUM _ Steam](https://store.steampowered.com/app/2419670/Eclipsium/) 
 
 [click for more!](https://github.com/Samurai-Ebben/Portflio/tree/main/Sources/Eclipsium)
 
@@ -40,7 +40,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
 
 - A fast-paced 2D platformer about a formless being crashing on a planet and trying to find her way back to the sky.
 - **Team:** Three programmers and three artists.
-- **Technologies Used:** Unity2D, DOTween and Input system.
+- **Technologies Used:** Unity2D, DOTween, Input system and particles systems.
 - SGA 2024 Game of the year and Best Art nominee. 
 
 - [Vesper ITCH.IO](https://yrgo-game-creator.itch.io/vesper)
