@@ -132,7 +132,7 @@ This repository showcases the projects I've worked on, highlighting my skills an
     - during that week I found problems with footsteps sounds, so i optimized and modified the script so it works better on new and old surfaces.
 - Time/project management.
     - e.g., I took two parallel programs (Högskolan i Skövde and Yrgo) at the same time. In Addition I lived two hourse away from Yrgo.
-    - With dedicated time managment I gained great grades at Yrgo while also finishing the first and half years of the university. 
+    - With dedicated time managment I gained great grades at both programs. 
 - Multitasker
 - Problem solver: Finding the problem is half of the solution.
 
