@@ -1,4 +1,4 @@
-# Eclipsium
+# Eclipsium - Housefire Games
 (*I have signed an NDA on this project what i am sharing is everything i am allowed to, there are more things i have done during this project*)
 
 At Housefire Games, I partnered with game designers, artists, and senior engineers to architect, optimize, and elevate core systems, gameplay mechanics, and development tools. To deliver and launch their debut game ECLIPSIUM
