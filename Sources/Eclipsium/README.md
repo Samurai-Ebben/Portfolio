@@ -127,6 +127,6 @@ To make it easy for the developers and desginers, I developed a tool that opens 
 - Open and closes scenes based on the users choice.
 - Fast and easy to understand search-bar. To filter between the different scriptable objects.
 
-![](/Sources/Eclipsium/Images/HowToUse.gif) 
+![](/Sources/Eclipsium/Images/HowToUseTool.gif) 
 
 
