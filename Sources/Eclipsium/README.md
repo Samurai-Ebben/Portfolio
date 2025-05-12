@@ -3,6 +3,9 @@
 
 At Housefire Games, I partnered with game designers, artists, and senior engineers to architect, optimize, and elevate core systems, gameplay mechanics, and development tools. To deliver and launch their debut game ECLIPSIUM
 
+--- 
+
+
 ### Spline-Sync Mechanics
 
 Objective: Create a seamless mechanic that ties together two distinct “body forms” (e.g. miniture planet and planet) so that player inputs and environmental interactions remain fluid when transitioning.
@@ -109,6 +112,21 @@ Smooth Transition: Rather than snapping, I slerp from the current gravity direct
 - Edge Cases & Stability
 When transitioning mid-air, I clamp the interpolation speed to avoid flipping the camera too fast.
 
-- If the spline normal deviates more than 90° (e.g. from floor to ceiling), I require a brief ground contact before rotating gravity, preventing disorienting flips.
 
 ![](/Sources/Eclipsium/Images/Conveyors.gif) 
+
+
+---
+
+### Editor tool: Level selector
+
+During the development of Eclipsium we followed a scene-structure to avoid merge confilcts and gain some time developing the games and levels.
+To make it easy for the developers and desginers, I developed a tool that opens all levels requiered for a level. The architicture behined it:
+- It implements a scriptableObject approach to save all the requiered scenes and any additional scenes.
+- Inherits from EditorWindow class to open a new window and allow the user to interact with the choices.
+- Open and closes scenes based on the users choice.
+- Fast and easy to understand search-bar. To filter between the different scriptable objects.
+
+![](/Sources/Eclipsium/Images/HowToUse.gif) 
+
+
