@@ -18,6 +18,11 @@ body {
   background: var(--dark);
   line-height: 1.6;
 }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .container {
   width: 90%;
   max-width: 1200px;
