@@ -7,14 +7,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header with gradient background and creative styling -->
   <header class="header">
-    <div class="container">
+    <div class="hero container">
       <h1>Ebben's Game Development Portfolio</h1>
-      <p>I am a passionate game developer focusing on gameplay programming, player mechanics, and AI. Experienced with shaders, UI, editor tools, and systems.</p>
+      <p>Gameplay programming · Player mechanics · AI · Shaders · UI · Editor tools</p>
     </div>
-    <nav class="toc sticky-nav">
-      <ul class="container">
-        <li><a href="#game-projects">Game Projects</a></li>
+    <!-- Interactive navigation bar -->
+    <nav class="nav container">
+      <ul>
+        <li><a href="#game-projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -22,66 +24,77 @@
     </nav>
   </header>
 
-  <section id="game-projects" class="projects container">
-    <h2>Game Projects</h2>
-    <div class="project-grid">
-      <!-- ECLIPSIUM -->
-      <div class="project-card">
-        <div class="thumbnail">
-          <img src="Sources/Eclipsium/Images/header.jpg" alt="ECLIPSIUM">
-          <div class="overlay">
-            <h3>ECLIPSIUM</h3>
-            <p><strong>Team:</strong> Housefire Games</p>
-            <p><strong>Technologies:</strong> Unity, Scriptable Objects, Object pooling</p>
-            <a href="Sources/Eclipsium/" class="btn">More Details</a>
+  <!-- Main Content -->
+  <main>
+    <section id="game-projects" class="projects container">
+      <h2>Game Projects</h2>
+      <div class="project-grid">
+        <!-- ECLIPSIUM -->
+        <div class="project-card">
+          <div class="thumbnail">
+            <img src="Sources/Eclipsium/Images/header.jpg" alt="ECLIPSIUM">
+            <div class="overlay">
+              <h3>ECLIPSIUM</h3>
+              <p>Housefire Games · Unity · Scriptable Objects · Object pooling</p>
+              <div class="buttons">
+                <a href="https://store.steampowered.com/app/2419670/Eclipsium/" class="btn">Steam</a>
+                <a href="Sources/Eclipsium/" class="btn secondary">More Details</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- VESPER -->
-      <div class="project-card">
-        <div class="thumbnail">
-          <img src="Sources/Vesper/Images/vesper_thumb_35.png" alt="VESPER">
-          <div class="overlay">
-            <h3>VESPER</h3>
-            <p>2D platformer about a formless being finding her way back to the sky.</p>
-            <p><strong>Nominee:</strong> SGA 2024 Best Art</p>
-            <a href="Sources/Vesper/" class="btn">More Details</a>
+        <!-- VESPER -->
+        <div class="project-card">
+          <div class="thumbnail">
+            <img src="Sources/Vesper/Images/vesper_thumb_35.png" alt="VESPER">
+            <div class="overlay">
+              <h3>VESPER</h3>
+              <p>2D platformer · Unity2D · DOTween · Input & Particle Systems</p>
+              <div class="buttons">
+                <a href="https://yrgo-game-creator.itch.io/vesper" class="btn">Play</a>
+                <a href="Sources/Vesper/" class="btn secondary">More Details</a>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Additional project-cards as needed -->
       </div>
+    </section>
 
-      <!-- Additional project-cards as needed -->
-    </div>
-  </section>
+    <!-- Skills Section separated clearly -->
+    <section id="skills" class="about container">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> C#, C++, Java, Python, AngelScript</li>
+        <li><strong>Engines:</strong> Unity, Unreal Engine 4/5</li>
+        <li>Fast learner & adaptable under pressure</li>
+        <li>Time & project management</li>
+        <li>Problem solving & multitasking</li>
+      </ul>
+    </section>
 
-  <section id="skills" class="about container">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> C#, C++, Java, Python, AngelScript</li>
-      <li><strong>Engines:</strong> Unity, Unreal Engine 4/5</li>
-      <li>Fast learner & adapter — optimized codebase under pressure</li>
-      <li>Time/project management — balanced two programs with top grades</li>
-      <li>Problem solver & multitasker</li>
-    </ul>
-  </section>
+    <!-- Education -->
+    <section id="education" class="education container">
+      <h2>Education</h2>
+      <ul>
+        <li>Game Creator Programmer — Yrgo, 2025</li>
+        <li>System Development — Högskolan i Skövde, 2025</li>
+        <li><a href="https://www.credly.com/badges/b8378b37-06ee-4570-a708-e0825a83b21f/public_url" target="_blank">Unity Junior Programmer</a></li>
+      </ul>
+    </section>
 
-  <section id="education" class="education container">
-    <h2>Education</h2>
-    <ul>
-      <li>Game Creator Programmer — Yrgo, 2025</li>
-      <li>System Development — Högskolan i Skövde, 2025</li>
-      <li><a href="https://www.credly.com/badges/b8378b37-06ee-4570-a708-e0825a83b21f/public_url" target="_blank">Unity Junior Programmer Certification</a></li>
-    </ul>
-  </section>
+    <!-- Contact -->
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:abdalrahman.alhindi48@gmail.com">abdalrahman.alhindi48@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abdalrhman-m-alhindi/" target="_blank">abdalrhman-m-alhindi</a></p>
+      <p><a href="Sources/CV25.pdf" download class="btn">Download CV</a></p>
+    </section>
+  </main>
 
-  <section id="contact" class="contact container">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:abdalrahman.alhindi48@gmail.com">abdalrahman.alhindi48@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abdalrhman-m-alhindi/" target="_blank">Profile</a></p>
-    <p><a href="Sources/CV25.pdf" download class="btn">Download CV</a></p>
-  </section>
-
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Ebben. All rights reserved.</p>
   </footer>
