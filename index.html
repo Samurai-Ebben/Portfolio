@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">YourName</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero container">
+      <h1>Hello, I'm <span>Your Name</span></h1>
+      <p>Full-stack developer passionate about building web experiences.</p>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+  </header>
+
+  <section id="about" class="about container">
+    <h2>About Me</h2>
+    <p>Brief bio goes here.</p>
+  </section>
+
+  <section id="projects" class="projects container">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <!-- Repeat this block for each project -->
+      <div class="project-card">
+        <img src="project1.png" alt="Project 1">
+        <h3>Project Title</h3>
+        <p>Short description.</p>
+        <a href="#" class="btn">View Details</a>
+      </div>
+      <!-- ... -->
+    </div>
+  </section>
+
+  <section id="contact" class="contact container">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/yourform" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Ebben Alhindi. All rights reserved.</p>
+  </footer>
+</body>
+</html>

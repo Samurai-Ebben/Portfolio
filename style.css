@@ -1,0 +1,193 @@
+:root {
+    --primary: #4a90e2;
+    --dark: #333;
+    --light: #f9f9f9;
+    --radius: 8px;
+    --transition: 0.3s;
+    font-size: 16px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--dark);
+    background: var(--light);
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .header {
+    background: var(--primary);
+    color: #fff;
+    padding: 2rem 0;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+  
+  .nav-links a:hover {
+    color: var(--dark);
+  }
+  
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero h1 span {
+    color: #fff;
+    background: var(--dark);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius);
+  }
+  
+  .hero p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: var(--dark);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background var(--transition);
+  }
+  
+  .btn:hover {
+    background: #222;
+  }
+  
+  /* Sections */
+  section {
+    padding: 4rem 0;
+  }
+  
+  section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+  }
+  
+  section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    display: block;
+    margin: 0.5rem auto 0;
+  }
+  
+  /* Projects */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform var(--transition);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .project-card h3 {
+    margin: 1rem 0;
+  }
+  
+  .project-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .project-card .btn {
+    margin-bottom: 1rem;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Contact Form */
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-size: 1rem;
+  }
+  
+  .contact button {
+    width: fit-content;
+    justify-self: center;
+  }
+  
+  /* Footer */
+  .footer {
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+  
