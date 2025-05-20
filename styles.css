@@ -44,12 +44,31 @@ body {
   font-size: 1.2rem;
 }
 
+/* Social Icons under Hero */
+.social {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--light);
+  transition: fill var(--transition);
+}
+
+.social-icon:hover svg {
+  fill: var(--primary);
+}
+
 /* Navigation Bar */
 .nav {
   background: var(--card-bg);
   backdrop-filter: blur(10px);
   border-radius: var(--radius) var(--radius) 0 0;
-  margin: 0 1rem;
+  margin: 0 auto;
 }
 
 .nav ul {
