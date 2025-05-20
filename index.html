@@ -2,59 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <base href="/Portfolio/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ebben Alhindi - Portfolio</title>
+  <title>Ebben's Game Development Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="header">
-    <nav class="nav container">
-      <a href="#" class="logo">Ebben</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hero container">
-      <h1>Hello, I'm <span>Your Name</span></h1>
-      <p>Game developer passionate about building web experiences.</p>
-      <a href="#projects" class="btn">View Projects</a>
+    <div class="container">
+      <h1>Ebben's Game Development Portfolio</h1>
+      <p>I am a passionate game developer focusing on gameplay programming, player mechanics, and AI. Experienced with shaders, UI, editor tools, and systems.</p>
+      <nav class="toc">
+        <ul>
+          <li><a href="#game-projects">Game Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <section id="about" class="about container">
-    <h2>About Me</h2>
-    <p>Brief bio goes here.</p>
-  </section>
-
-  <section id="projects" class="projects container">
-    <h2>Projects</h2>
+  <section id="game-projects" class="projects container">
+    <h2>Game Projects</h2>
     <div class="project-grid">
-      <!-- Repeat this block for each project -->
+      <!-- ECLIPSIUM -->
       <div class="project-card">
-        <img src="project1.png" alt="Project 1">
-        <h3>Project Title</h3>
-        <p>Short description.</p>
-        <a href="#" class="btn">View Details</a>
+        <div class="thumbnail">
+          <img src="/Sources/Eclipsium/Images/header.jpg" alt="ECLIPSIUM">
+        </div>
+        <h3>ECLIPSIUM</h3>
+        <p><strong>Team:</strong> Housefire Games</p>
+        <p><strong>Technologies:</strong> Unity, Editor scripting, Scriptable Objects, Object pooling</p>
+        <p>Optimized game by 30%, modified old systems, and created new gameplay tools.</p>
+        <a href="https://store.steampowered.com/app/2419670/Eclipsium/" class="btn">Steam</a>
+        <a href="Sources/Eclipsium/" class="btn">More Details</a>
       </div>
-      <!-- ... -->
+
+      <!-- VESPER -->
+      <div class="project-card">
+        <div class="thumbnail">
+          <img src="/Sources/Vesper/Images/vesper_thumb_35.png" alt="VESPER">
+        </div>
+        <h3>VESPER</h3>
+        <p>A fast-paced 2D platformer about a formless being finding her way back to the sky.</p>
+        <p><strong>Team:</strong> Three programmers &amp; three artists</p>
+        <p><strong>Technologies:</strong> Unity2D, DOTween, Input System, Particle Systems</p>
+        <p>SGA 2024 Game of the Year &amp; Best Art nominee.</p>
+        <a href="https://yrgo-game-creator.itch.io/vesper" class="btn">Play on itch.io</a>
+        <a href="Sources/Vesper/" class="btn">More Details</a>
+      </div>
+
+      <!-- Add more project cards following same structure -->
     </div>
   </section>
 
+  <section id="skills" class="about container">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> C#, C++, Java, Python, AngelScript</li>
+      <li><strong>Engines:</strong> Unity, Unreal Engine 4/5</li>
+      <li>Fast learner &amp; adapter — optimized codebase under pressure at Housefire Games</li>
+      <li>Time/project management — balanced two full programs with top grades</li>
+      <li>Multitasking &amp; problem solving</li>
+    </ul>
+  </section>
+
+  <section id="education" class="education container">
+    <h2>Education</h2>
+    <ul>
+      <li>Game Creator Programmer — Yrgo, 2025</li>
+      <li>System Development — Högskolan i Skövde, 2025</li>
+      <li><a href="https://www.credly.com/badges/b8378b37-06ee-4570-a708-e0825a83b21f/public_url" target="_blank">Unity Junior Programmer Certification</a></li>
+    </ul>
+  </section>
+
   <section id="contact" class="contact container">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/yourform" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:abdalrahman.alhindi48@gmail.com">abdalrahman.alhindi48@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abdalrhman-m-alhindi/" target="_blank">abdalrhman-m-alhindi</a></p>
+    <p><a href="/Sources/CV25.pdf" download class="btn">Download CV</a></p>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Ebben Alhindi. All rights reserved.</p>
+    <p>&copy; 2025 Ebben. All rights reserved.</p>
   </footer>
 </body>
 </html>
