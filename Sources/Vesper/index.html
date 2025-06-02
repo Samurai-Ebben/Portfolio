@@ -374,7 +374,7 @@ public class SizeStats : MonoBehaviour
         UpdateStatValues();
     }
 
-    public List<float<; ReturnStats(Sizes size)
+    public List<float> ReturnStats(Sizes size)
     {
         if (size == Sizes.SMALL) return statsSmall;
         if (size == Sizes.BIG) return statsLarge;
@@ -424,15 +424,15 @@ public class VentMovement : MonoBehaviour, IReset
 
     private void Start()
     {
-        rayCastHandler = GetComponent<RayCastHandler>;();
-        rb = GetComponent<Rigidbody2D>;();
+        rayCastHandler = GetComponent<RayCastHandler>();
+        rb = GetComponent<Rigidbody2D>();
         player = PlayerController.player.transform;
         RegisterSelfToResettableManager();
     }
 
     private void OnEnable()
     {
-        actions = GetComponent<PlayerInput>;().actions;
+        actions = GetComponent<PlayerInput>().actions;
         actions["Vent"].performed  += OnMove;
         actions["Vent"].canceled   += OnMoveCancel;
         actions.Enable();
@@ -454,7 +454,7 @@ public class VentMovement : MonoBehaviour, IReset
 
     void OnMove(InputAction.CallbackContext ctx)
     {
-        input = ctx.ReadValue<Vector2>;();
+        input = ctx.ReadValue<Vector2>();
         MaxInput();
     }
 
