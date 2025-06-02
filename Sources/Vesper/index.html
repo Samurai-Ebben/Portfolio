@@ -45,13 +45,12 @@
   </style>
 </head>
 <body>
-  <!-- Header & Hero (Dark-Purple theme) -->
+  <!-- Header & Hero -->
   <header class="header">
     <div class="hero container">
       <h1>VESPER</h1>
-      <p>2D Platformer · Unity2D · DOTween · Input & Particle Systems</p>
+      <p>2D Platformer · Unity2D · DOTween · Input &amp; Particle Systems</p>
     </div>
-
     <!-- Navigation Bar -->
     <nav class="nav">
       <ul>
@@ -66,30 +65,540 @@
 
   <!-- Main Content for VESPER -->
   <main>
+    <!-- Banner Image -->
     <section class="project-detail container">
-      <!-- Banner Image -->
       <div class="project-banner">
-        <img src="Sources/Vesper/Images/vesper_thumb_35.png" alt="VESPER banner">
+        <img
+          src="Sources/Vesper/Images/vesper_thumb_35.png"
+          alt="VESPER banner"
+        />
       </div>
+    </section>
 
-      <!-- Project Info -->
-      <div class="project-info">
-        <h2>About VESPER</h2>
-        <p><strong>Team:</strong> Three programmers &amp; three artists</p>
-        <p><strong>Technologies:</strong> Unity2D, DOTween, Input System, Particle Systems</p>
-        <p>A fast-paced 2D platformer about a formless being crashing on a planet and trying to find her way back to the sky. Nominee: SGA 2024 Game of the Year &amp; Best Art.</p>
+    <!-- Summary Section -->
+    <section class="container">
+      <h2>Summary of the Project</h2>
+      <p>
+        Vesper was a 7-week game project pitched by my classmate at Yrgo. You
+        can play it on
+        <a href="https://yrgo-game-creator.itch.io/vesper" class="btn"
+          >Vesper ITCH.IO</a
+        >.
+      </p>
+      <p>
+        Vesper is a skill-based puzzle platformer where you play as a formless
+        celestial being trapped in a physical form. Use the ability to change
+        sizes to find your way home.
+      </p>
 
-        <!-- Buttons -->
-        <div class="buttons">
-          <a href="https://yrgo-game-creator.itch.io/vesper" class="btn">Play on itch.io</a>
-          <a href="Sources/Vesper/" class="btn secondary">More on GitHub</a>
-          <a href="index.html" class="btn secondary">Back to Portfolio</a>
+      <!-- Two-Column Image Grid -->
+      <div class="image-grid">
+        <img
+          src="Sources/Vesper/Images/Screenshot2024-01-04145910.png"
+          alt="Vesper screenshot 1"
+        />
+        <img
+          src="Sources/Vesper/Images/3G5X+H.png"
+          alt="Vesper screenshot 2"
+        />
+      </div>
+      <div class="image-grid">
+        <img
+          src="Sources/Vesper/Images/vesper_trailer_v2.gif"
+          alt="Vesper trailer GIF"
+        />
+        <img
+          src="Sources/Vesper/Images/Screenshot2024-01-04150218.png"
+          alt="Vesper screenshot 3"
+        />
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Main Mechanics Section -->
+    <section class="container">
+      <h2>Main Mechanics</h2>
+      <p>
+        As a 2D fast-paced platformer, the three most important mechanics are
+        <strong>player movement</strong>, <strong>changing sizes</strong>, and
+        the <strong>particle system</strong>. I was primarily responsible for
+        implementing these systems.
+      </p>
+
+      <!-- Player Movement Sub-Section -->
+      <article>
+        <h3>Player Movement</h3>
+        <p>
+          Player movement consumed most of my time to perfect—making it as
+          smooth and responsive as possible. Below is how it evolved:
+        </p>
+
+        <div class="image-grid">
+          <figure>
+            <img
+              src="Sources/Vesper/Images/1stWeekMovement.gif"
+              alt="First week movement GIF"
+            />
+            <figcaption>Initial movement prototype (1st week)</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="Sources/Vesper/Images/nowMovement.gif"
+              alt="Current movement GIF"
+            />
+            <figcaption>Refined movement after optimization</figcaption>
+          </figure>
         </div>
-      </div>
+
+        <p>
+          Player mechanics are the largest subsystem in the game. I handled the
+          input precision and adjusted stats for each player size
+          (<em>Big</em>, <em>Medium</em>, <em>Small</em>). We used Unity’s
+          <strong>Input System</strong> with events and delegates:
+        </p>
+
+        <details>
+          <summary>Show Input functions</summary>
+          <pre><code>
+// Called every frame when Move input is performed or canceled
+public void Move(InputAction.CallbackContext ctx)
+{
+    moveInput = ctx.ReadValue<Vector2>();
+}
+
+void OnJumpStarted(InputAction.CallbackContext ctx)
+{
+    startedJump = true;
+    if (ctx.performed)
+    {
+        jumpBufferTimer = jumpBufferTime;
+        jumpPressed = true;
+    }
+}
+
+void OnJumpCanceled(InputAction.CallbackContext ctx)
+{
+    jumpBufferTimer -= jumpBufferTime;
+    if (!ctx.performed && rb.velocity.y > 0)
+    {
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutOff);
+        coyoteTimer = 0;
+    }
+}
+          </code></pre>
+          <p>These were bound using delegates:</p>
+          <pre><code>
+// Example of binding in Awake()
+actions["Jump"].performed += OnJumpStarted;
+actions["Jump"].canceled  += OnJumpCanceled;
+          </code></pre>
+        </details>
+      </article>
+
+      <hr />
+
+      <!-- Switching Sizes Sub-Section -->
+      <article>
+        <h3>Switching Sizes</h3>
+        <p>
+          Changing sizes is crucial for navigating puzzles in Vesper. Rather
+          than complex math, we opted for a simple system that adjusted the
+          player’s scale and stats based on three presets.
+        </p>
+
+        <div class="image-grid">
+          <figure>
+            <img
+              src="Sources/Vesper/Images/Switch2.gif"
+              alt="Switch to large GIF"
+            />
+            <figcaption>Player switches to Large</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="Sources/Vesper/Images/Switch.gif"
+              alt="Switch to small GIF"
+            />
+            <figcaption>Player switches to Small</figcaption>
+          </figure>
+        </div>
+
+        <details>
+          <summary>SizeStats Script</summary>
+          <pre><code>
+public class SizeStats : MonoBehaviour
+{
+    #region StatsLists
+    List<float> statsSmall;
+    List<float> statsMedium;
+    List<float> statsLarge;
+    #endregion
+
+    #region SizeParameters
+    [Header("Size Parameters")]
+    [Range(0, 3)] public float sizeSmall  = 0.25f;
+    [Range(0, 3)] public float sizeMedium = 0.75f;
+    [Range(0, 3)] public float sizeLarge  = 1.25f;
+    #endregion
+
+    #region MovementStats
+    [Header("Movement Stats")]
+    [Range(0, 100)] public float speedSmall  = 10;
+    [Range(0, 100)] public float speedMedium = 6;
+    [Range(0, 100)] public float speedLarge  = 4;
+
+    [Space(10)]
+    [Range(0, 100)] public float accelerationSmall  = 30;
+    [Range(0, 100)] public float accelerationMedium = 20;
+    [Range(0, 100)] public float accelerationLarge  = 10;
+
+    [Space(10)]
+    [Range(0, 100)] public float deaccelerationSmall  = 10;
+    [Range(0, 100)] public float deaccelerationMedium = 20;
+    [Range(0, 100)] public float deaccelerationLarge  = 30;
+    #endregion
+
+    #region JumpStats
+    [Header("Jump Stats")]
+    [Range(0, 50)] public float jumpHeightSmall  = 4;
+    [Range(0, 50)] public float jumpHeightMedium = 6;
+    [Range(0, 50)] public float jumpHeightLarge  = 8;
+
+    [Space(10)]
+    [Range(0, 100)] public float fallSpeedSmall  = 1;
+    [Range(0, 100)] public float fallSpeedMedium = 2;
+    [Range(0, 100)] public float fallSpeedLarge  = 3;
+
+    [Space(10)]
+    [Range(0, 1)] public float jumpCutOffSmall  = 0.5f;
+    [Range(0, 1)] public float jumpCutOffMedium = 0.1f;
+    [Range(0, 1)] public float jumpCutOffLarge  = 0.005f;
+    #endregion
+
+    #region GroundCheckSizes
+    [Header("Ground Check Sizes")]
+    float groundCheckSizeSmallX;
+    float groundCheckSizeMediumX;
+    float groundCheckSizeLargeX;
+
+    [Space(10)]
+    float groundCheckSizeSmallY;
+    float groundCheckSizeMediumY;
+    float groundCheckSizeLargeY;
+    #endregion
+
+    #region AirMultipliers
+    [Header("Air Multipliers")]
+    [Range(0, 10)] public float airSpeedMultiSmall  = 0.9f;
+    [Range(0, 10)] public float airSpeedMultiMedium = 1f;
+    [Range(0, 10)] public float airSpeedMultiLarge  = 1f;
+
+    [Space(10)]
+    [Range(0, 10)] public float airAccMultiSmall  = 1f;
+    [Range(0, 10)] public float airAccMultiMedium = 1f;
+    [Range(0, 10)] public float airAccMultiLarge  = 1f;
+
+    [Space(10)]
+    [Range(0, 10)] public float airDecMultiSmall  = 0.9f;
+    [Range(0, 10)] public float airDecMultiMedium = 0.9f;
+    [Range(0, 10)] public float airDecMultiLarge  = 0.9f;
+    #endregion
+
+    #region LandingSfxOffsets
+    [Header("Landing SFX Offsets")]
+    [Space(10)]
+    public float landingSfxOffsetSmall  = 0.05f;
+    public float landingSfxOffsetMedium = 0.1f;
+    public float landingSfxOffsetLarge  = 0.5f;
+    #endregion
+
+    void Start()
+    {
+        UpdateStatValues();
+    }
+
+    public List<float> ReturnStats(Sizes size)
+    {
+        if (size == Sizes.SMALL)
+            return statsSmall;
+        else if (size == Sizes.BIG)
+            return statsLarge;
+        else if (size == Sizes.MEDIUM)
+            return statsMedium;
+
+        UpdateStatValues();
+        return statsMedium;
+    }
+
+    private void UpdateStatValues()
+    {
+        groundCheckSizeSmallX   = sizeSmall;
+        groundCheckSizeMediumX  = sizeMedium;
+        groundCheckSizeLargeX   = sizeLarge;
+        groundCheckSizeSmallY   = 0.007f;
+        groundCheckSizeMediumY  = 0.01f;
+        groundCheckSizeLargeY   = 0.009f;
+
+        statsSmall = new List<float>
+        {
+            sizeSmall,
+            speedSmall,
+            accelerationSmall,
+            deaccelerationSmall,
+            jumpHeightSmall,
+            fallSpeedSmall,
+            jumpCutOffSmall,
+            groundCheckSizeSmallX,
+            groundCheckSizeSmallY,
+            airSpeedMultiSmall,
+            airAccMultiSmall,
+            airDecMultiSmall,
+            landingSfxOffsetSmall
+        };
+
+        statsMedium = new List<float&gt
+        {
+            sizeMedium,
+            speedMedium,
+            accelerationMedium,
+            deaccelerationMedium,
+            jumpHeightMedium,
+            fallSpeedMedium,
+            jumpCutOffMedium,
+            groundCheckSizeMediumX,
+            groundCheckSizeMediumY,
+            airSpeedMultiMedium,
+            airAccMultiMedium,
+            airDecMultiMedium,
+            landingSfxOffsetMedium
+        };
+
+        statsLarge = new List<float&gt
+        {
+            sizeLarge,
+            speedLarge,
+            accelerationLarge,
+            deaccelerationLarge,
+            jumpHeightLarge,
+            fallSpeedLarge,
+            jumpCutOffLarge,
+            groundCheckSizeLargeX,
+            groundCheckSizeLargeY,
+            airSpeedMultiLarge,
+            airAccMultiLarge,
+            airDecMultiLarge,
+            landingSfxOffsetLarge
+        };
+    }
+}
+          </code></pre>
+        </details>
+      </article>
+
+      <hr />
+
+      <!-- Vent Movement Sub-Section -->
+      <article>
+        <h3>Vent Movement</h3>
+        <p>
+          The labyrinth (vent) movement was discovered by accident and became
+          one of the most enjoyable experiences in the game. You move from point
+          A to Z continuously, but can redirect—though you cannot stop mid‐path.
+          I implemented this mechanic as well.
+        </p>
+        <figure class="image-grid">
+          <img
+            src="Sources/Vesper/Images/LabyrinthMovement.gif"
+            alt="Vent movement GIF"
+          />
+        </figure>
+
+        <details>
+          <summary>VentMovement Script</summary>
+          <pre><code>
+public class VentMovement : MonoBehaviour, IReset
+{
+    public float moveSpeed = 5f;
+    public bool canMoveRight;
+    public bool canMoveUp;
+    public bool canMoveDown;
+    public bool canMoveLeft;
+
+    public LayerMask wayPoint;
+    private Vector2 input;
+    public Vector2 inputDirection;
+
+    Transform player;
+    private Rigidbody2D rb;
+    InputActionAsset actions;
+    RayCastHandler rayCastHandler;
+
+    public Vector2 bufferedInput;
+    public Vector3 prevPos;
+
+    public float deadZone = 0.9f;
+
+    private void Start()
+    {
+        rayCastHandler = GetComponent<RayCastHandler>();
+        rb = GetComponent<Rigidbody2D>();
+        player = PlayerController.player.transform;
+        RegisterSelfToResettableManager();
+    }
+
+    private void OnEnable()
+    {
+        actions = GetComponent<PlayerInput>().actions;
+        actions["Vent"].performed  += OnMove;
+        actions["Vent"].canceled   += OnMoveCancel;
+        actions.Enable();
+        inputDirection = PlayerController.instance.moveInput;
+    }
+
+    private void OnDisable()
+    {
+        actions["Vent"].performed  -= OnMove;
+        actions["Vent"].canceled   -= OnMoveCancel;
+        input = Vector2.zero;
+    }
+
+    void Update()
+    {
+        MoveBuffer();
+        Move();
+    }
+
+    void OnMove(InputAction.CallbackContext ctx)
+    {
+        input = ctx.ReadValue<Vector2>();
+        MaxInput();
+    }
+
+    void MaxInput()
+    {
+        if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+        {
+            input.y = 0;
+        }
+        else if (Mathf.Abs(input.y) > Mathf.Abs(input.x))
+        {
+            input.x = 0;
+        }
+    }
+
+    void OnMoveCancel(InputAction.CallbackContext ctx)
+    {
+        input = Vector2.zero;
+    }
+
+    void MoveBuffer()
+    {
+        if (input.x > deadZone)
+        {
+            if (canMoveRight)
+            {
+                inputDirection.x = 1;
+                inputDirection.y = 0;
+                bufferedInput = Vector2.zero;
+                return;
+            }
+            else
+            {
+                bufferedInput.x = 1;
+                bufferedInput.y = 0;
+            }
+        }
+
+        if (input.x < -deadZone)
+        {
+            if (canMoveLeft)
+            {
+                inputDirection.x = -1;
+                inputDirection.y = 0;
+                bufferedInput = Vector2.zero;
+                return;
+            }
+            else
+            {
+                bufferedInput.x = -1;
+                bufferedInput.y = 0;
+            }
+        }
+
+        if (input.y > deadZone)
+        {
+            if (canMoveUp)
+            {
+                inputDirection.y = 1;
+                inputDirection.x = 0;
+                bufferedInput = Vector2.zero;
+                return;
+            }
+            else
+            {
+                bufferedInput.y = 1;
+                bufferedInput.x = 0;
+            }
+        }
+
+        if (input.y < -deadZone)
+        {
+            if (canMoveDown)
+            {
+                inputDirection.y = -1;
+                inputDirection.x = 0;
+                bufferedInput = Vector2.zero;
+                return;
+            }
+            else
+            {
+                bufferedInput.y = -1;
+                bufferedInput.x = 0;
+            }
+        }
+        return;
+    }
+
+    void Move()
+    {
+        rb.gravityScale = 0;
+        canMoveUp    = rayCastHandler.smallTopIsFree;
+        canMoveDown  = rayCastHandler.smallDownIsFree;
+        canMoveLeft  = rayCastHandler.leftSide;
+        canMoveRight = rayCastHandler.rightSide;
+
+        if (bufferedInput != Vector2.zero)
+        {
+            if (((canMoveRight || canMoveLeft) && bufferedInput.x != 0) ||
+                ((canMoveUp || canMoveDown) && bufferedInput.y != 0))
+            {
+                rb.velocity = new Vector2(bufferedInput.x, bufferedInput.y) * moveSpeed;
+            }
+            else
+            {
+                rb.velocity = new Vector2(inputDirection.x, inputDirection.y) * moveSpeed;
+            }
+        }
+        else
+        {
+            rb.velocity = new Vector2(inputDirection.x, inputDirection.y) * moveSpeed;
+        }
+
+        if (Vector3.Distance(transform.position, prevPos) < 0.005f)
+        {
+            bufferedInput = Vector2.zero;
+        }
+        prevPos = transform.position;
+    }
+}
+          </code></pre>
+        </details>
+      </article>
     </section>
   </main>
 
-  <!-- Footer (same as main page) -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Ebben. All rights reserved.</p>
