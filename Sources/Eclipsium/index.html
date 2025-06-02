@@ -267,3 +267,91 @@
         Using Unity’s <code>OnSceneGUI</code>, I drew point handles in the Scene
         view so designers could click, drag, or delete spline points. Custom
         inspector buttons like “Add Curve” and “Undo Last” updated the point list
+        and auto-committed changes to version control.
+      </p>
+
+      <div class="image-gallery">
+        <img
+          src="Sources/Eclipsium/Images/ConveyorSpline.png"
+          alt="Conveyor spline editor screenshot"
+        />
+        <img
+          src="Sources/Eclipsium/Images/CustomSpline.png"
+          alt="Custom spline handles and points"
+        />
+      </div>
+
+      <h3>Mesh Deformation</h3>
+      <p>
+        Once splines were in place, I built a vertex-remapping system that “bends”
+        meshes along curves. Each deformable mesh uses a UV channel where U = distance
+        along spline (0–1) and V = lateral offset. At runtime, I sample:
+      </p>
+      <ul>
+        <li><code>position = spline.GetPoint(u)</code></li>
+        <li><code>tangent = spline.GetTangent(u)</code></li>
+        <li>Construct a Frenet frame (tangent, normal, binormal)</li>
+        <li>Apply lateral offset along binormal so the mesh wraps smoothly</li>
+      </ul>
+      <!-- Keeping this small list because it’s a single algorithm explanation; otherwise, readability drops. -->
+
+      <h3>Gravity Reorientation</h3>
+      <p>
+        To allow walking on walls or inverted slopes, I dynamically shifted the
+        gravity vector using sampled spline normals:
+      </p>
+      <p>
+        1. Sample the nearest spline normal at the player’s attach point via
+        <code>GetNormal(u)</code>.  
+        2. Compute <code>desiredDown = –sampledNormal</code>.  
+        3. Slerp from the current gravity vector to <code>desiredDown</code> over
+        0.25s for a smooth transition.  
+        4. Feed that gravity into our custom controller (<code>controller.ApplyGravity()</code>)
+        and rotate the player’s root so “up” always opposes gravity.
+      </p>
+      <p>
+        Blending normals at spline junctions and clamping interpolation mid-air
+        prevented abrupt camera flips, ensuring stable camera and character behavior.
+      </p>
+
+      <div class="image-gallery">
+        <img
+          src="Sources/Eclipsium/Images/Conveyors.gif"
+          alt="Conveyors and gravity reorientation demo"
+        />
+      </div>
+    </section>
+
+    <!-- Editor Tool: Level Selector -->
+    <section class="container">
+      <h2>Editor Tool: Level Selector</h2>
+
+      <p>
+        To streamline opening multiple scenes for each level (avoiding merge conflicts),
+        I built a Unity Editor window using ScriptableObjects. Designers and developers
+        could pick a level in a search-bar interface, and the tool would open all
+        required scenes automatically.
+      </p>
+      <p>
+        Behind the scenes, each ScriptableObject stored a list of scene paths. The
+        EditorWindow allowed filtering these objects via a search field, then loaded
+        or unloaded scenes based on the user’s selection.
+      </p>
+
+      <div class="image-gallery">
+        <img
+          src="Sources/Eclipsium/Images/HowToUseTool.gif"
+          alt="How to use Level Selector tool GIF"
+        />
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ebben. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
