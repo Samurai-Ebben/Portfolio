@@ -7,40 +7,72 @@
   <title>VESPER — Ebben’s Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 
- <style>
+  <style>
     body {
       position: relative;
       min-height: 100vh;
       overflow-x: hidden;
     }
-
-    /* 1) Blurred background image */
+    /* Blurred background image */
     body::before {
       content: "";
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100vw;
       height: 100vh;
-      background: url('Sources/Vesper/Images/VesperMain_Capsule.png') no-repeat center center / cover;
+      background: url('Sources/Vesper/Images/vesper_thumb_35.png') no-repeat center center / cover;
       filter: blur(8px);
       z-index: -2;
     }
-
-    /* 2) Semi-transparent purple overlay */
+    /* Semi-transparent purple overlay */
     body::after {
       content: "";
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100vw;
       height: 100vh;
       background: linear-gradient(
         to bottom right,
-        rgba(107,13,173,0.6),
-        rgba(26,0,26,0.6)
+        rgba(107, 13, 173, 0.6),
+        rgba(26, 0, 26, 0.6)
       );
       z-index: -1;
+    }
+    /* Gallery styling for first four images */
+    .gallery {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+    .gallery img {
+      flex: 0 0 auto;
+      width: 240px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    /* Summary section spacing */
+    .summary-section p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .summary-button {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+    /* Code blocks */
+    pre {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: var(--radius);
+      overflow-x: auto;
+      margin-bottom: 2rem;
+    }
+    code {
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -66,33 +98,30 @@
   <!-- Main Content for VESPER -->
   <main>
     <!-- Banner Image -->
-    <section class="project-detail container">
+    <!-- <section class="project-detail container">
       <div class="project-banner">
         <img
           src="Sources/Vesper/Images/vesper_thumb_35.png"
           alt="VESPER banner"
         />
       </div>
-    </section>
+    </section> -->
 
     <!-- Summary Section -->
     <section class="container">
       <h2>Summary of the Project</h2>
       <p>
-        Vesper was a 7-week game project pitched by my classmate at Yrgo. You
-        can play it on
-        <a href="https://yrgo-game-creator.itch.io/vesper" class="btn"
-          >Vesper ITCH.IO</a
-        >.
+        Vesper was a 7-week game project pitched by my classmate at Yrgo.
+        
       </p>
       <p>
         Vesper is a skill-based puzzle platformer where you play as a formless
         celestial being trapped in a physical form. Use the ability to change
         sizes to find your way home.
+
       </p>
 
-      <!-- Two-Column Image Grid -->
-      <div class="image-grid">
+      <div class="gallery">
         <img
           src="Sources/Vesper/Images/Screenshot2024-01-04145910.png"
           alt="Vesper screenshot 1"
@@ -101,8 +130,6 @@
           src="Sources/Vesper/Images/3G5X+H.png"
           alt="Vesper screenshot 2"
         />
-      </div>
-      <div class="image-grid">
         <img
           src="Sources/Vesper/Images/vesper_trailer_v2.gif"
           alt="Vesper trailer GIF"
