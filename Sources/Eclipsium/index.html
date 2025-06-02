@@ -8,7 +8,121 @@
   <title>ECLIPSIUM — Ebben’s Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 
-
+  <!-- Inline override: blurred OldPlaneteriumPuzzle background + purple overlay -->
+  <style>
+    body {
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    /* Blurred background image */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; 
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('Sources/Eclipsium/Images/OldPlaneteriumPuzzle.gif') no-repeat center center / cover;
+      filter: blur(8px);
+      z-index: -2;
+    }
+    /* Purple overlay */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; 
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(
+        to bottom right,
+        rgba(107, 13, 173, 0.6),
+        rgba(26, 0, 26, 0.6)
+      );
+      z-index: -1;
+    }
+    /* Gallery styling */
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .image-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    /* Code block styling */
+    pre {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: var(--radius);
+      overflow-x: auto;
+      margin-bottom: 2rem;
+    }
+    code {
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+    }
+    /* Section spacing */
+    section {
+      padding: 3rem 0;
+    }
+    section + section {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: var(--light);
+    }
+    h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      color: var(--light);
+    }
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: var(--light);
+    }
+    /* Buttons */
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn, .btn.secondary {
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      text-decoration: none;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn:hover {
+      background: #7a00cc;
+      transform: translateY(-2px);
+    }
+    .btn.secondary {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--light);
+    }
+    .btn.secondary:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <!-- Header & Hero -->
@@ -16,12 +130,11 @@
     <div class="hero container">
       <h1>ECLIPSIUM</h1>
       <p>
-        At Housefire Games, I partnered with designers, artists, and senior
-        engineers to architect, optimize, and elevate core systems—delivering
-        and launching their debut game, <strong>ECLIPSIUM</strong>.
+        At Housefire Games, I partnered with designers, artists, and senior engineers
+        to build, optimize, and elevate core systems—helping deliver and launch
+        their debut game, <strong>ECLIPSIUM</strong>.
       </p>
     </div>
-
     <!-- Navigation Bar -->
     <nav class="nav">
       <ul>
@@ -37,280 +150,120 @@
   <!-- Main Content for ECLIPSIUM -->
   <main>
     <!-- Spline-Sync Mechanics -->
-    <p>
-      <em>(*I have signed an NDA on this project; what I am sharing below is
-      everything I am allowed to. There are more systems behind the scenes that
-      I implemented.*)</em>
-    </p>
     <section class="container">
       <h2>Spline-Sync Mechanics</h2>
+
       <p>
-        Objective: Create a seamless mechanic tying together two distinct “body
-        forms” (e.g., miniature planet and full planet) so that player inputs
-        and environmental interactions remain fluid during transitions.
+        <em>(*I have signed an NDA on this project. The following details are
+        everything I’m allowed to share.*)</em>
       </p>
-      <h3>Requirements Gathering &amp; Design</h3>
-      <ul>
-        <li>
-          Collaborated with level designers to define how each body form should
-          react to world geometry, physics, and input.
-        </li>
-        <li>
-          Sketched flow diagrams showing player state transitions, required data
-          hand‐offs (pose, velocity, animation state), and edge cases (mid-air
-          switches, collision overlaps).
-        </li>
-      </ul>
 
-      <h3>Implementation Highlights</h3>
-      <ul>
-        <li>
-          <strong>State-Driven Progresser Bridge:</strong> Built a lightweight C#
-          class that listens for form-switch events and copies over transform,
-          velocity, and animation parameters in real time.
-        </li>
-        <li>
-          <strong>Dual-Rig Sync:</strong> Extended Unity’s Spline system to
-          mirror root transforms between two rigs, ensuring the secondary rig
-          (celestial planet) perfectly overlaps the primary during blending.
-        </li>
-        <li>
-          <strong>Smooth Interpolation:</strong> Wrote a coroutine-based smoothing
-          routine that interpolates position, rotation, and scale over a
-          configurable duration. Prevented jitter when switching on complex
-          geometry and improved play-feel.
-        </li>
-        <li>
-          <strong>Edge-Case Handling:</strong> Added checks to detect if the
-          target form’s collider would intersect world geometry. If so, the
-          switch is deferred until a safe frame to avoid “stuck” states.
-        </li>
-      </ul>
+      <h3>Overview</h3>
+      <p>
+        The goal was to create a seamless switch between two “body forms”
+        (a miniature planet and the full-scale world) so that player inputs,
+        physics, and animations remain smooth during transitions.
+      </p>
 
-      <p><strong>Results:</strong></p>
-      <ul>
-        <li>Achieved an instantaneous, polished planet-shift feel.</li>
-        <li>Improved player feedback and immersion.</li>
-      </ul>
+      <h3>Workflow & Design</h3>
+      <p>
+        First, I collaborated with level designers to document how each form
+        should react to world geometry and user input. We sketched flow
+        diagrams showing state transitions, data handoffs (position, velocity,
+        animation), and edge-case handling (e.g., mid-air or colliding form
+        switches).
+      </p>
 
-      <div class="image-grid">
+      <h3>Core Implementation</h3>
+      <p>
+        I built a lightweight, state-driven C# “Bridge” class that listens for
+        form-switch events. When triggered, it copies transform and animation
+        parameters in real time from the primary rig to the secondary (planet)
+        rig.
+      </p>
+      <p>
+        To ensure both rigs stayed in sync, I extended Unity’s Spline system to
+        mirror root transforms between them. During a transition, a coroutine
+        smoothly interpolates position, rotation, and scale over a configurable
+        duration—preventing any jitter on complex geometry.
+      </p>
+      <p>
+        Finally, I added collision checks: if the target form’s collider would
+        intersect world geometry, the switch is deferred until a safe frame,
+        avoiding “stuck” states.
+      </p>
+
+      <h3>Results</h3>
+      <p>
+        The final system produced an almost instantaneous, polished planet-shift
+        feel. Player feedback and immersion rose significantly, thanks to smooth
+        blending and reliable edge-case handling.
+      </p>
+
+      <div class="image-gallery">
         <img
           src="Sources/Eclipsium/Images/OldPlaneteriumPuzzle.gif"
-          alt="Old Planeterium Puzzle GIF"
+          alt="Old Planeterium Puzzle GIF (Spline-Sync Demo)"
         />
       </div>
     </section>
 
-    <hr />
-
     <!-- Shader “Consumption” Rework & Effects -->
     <section class="container">
       <h2>Shader “Consumption” Rework &amp; Effects</h2>
+
+      <h3>Gameplay Tuning</h3>
       <p>
-        Objective: Overhaul the original “darkness” damage‐over‐time effect and
-        enhance it with tentacle visuals for a more menacing feel.
+        We overhauled the original “darkness” damage-over-time mechanic, adding
+        tentacle visuals to enhance player immersion. Damage ticks and radius
+        falloff were tuned so players could anticipate and react to encroaching
+        darkness.
+      </p>
+      <p>
+        Anticipatory VFX cues (tendrils) appear just before the darkness consumes
+        the player—providing clear visual telegraphing and improving fairness.
       </p>
 
-      <h3>Core Gameplay Tuning</h3>
-      <ul>
-        <li>
-          Redesigned damage tick timing and radius falloff so players could see
-          and react to the encroaching darkness.
-        </li>
-        <li>
-          Added anticipatory VFX cues—consumption by tendrils—before darkness
-          took hold, giving clear visual telegraphing.
-        </li>
-      </ul>
+      <h3>Tentacle System</h3>
+      <p>
+        I implemented a runtime system to spawn tentacle meshes around the player.
+        Each tentacle spawns at a random rotation, then grows exponentially via
+        shader parameters when the player is within the danger radius. If the
+        player escapes, the tentacles recede smoothly.
+      </p>
 
-      <h3>Tentacle Additions</h3>
-      <ul>
-        <li>
-          Created a runtime system to spawn tentacle meshes around the player’s
-          periphery when darkness activated.
-        </li>
-        <li>
-          Each tentacle spawns at a random rotation around the player; the
-          tendrils (shader) grow exponentially based on the player’s proximity.
-        </li>
-        <li>
-          Blended tentacle shader values in/out based on distance, so they
-          appear to “reach” and then recede if the player escapes the radius.
-        </li>
-      </ul>
-
-      <div class="image-grid">
-        <figure>
-          <img
-            src="Sources/Eclipsium/Images/Tendrils.gif"
-            alt="Tentacle VFX GIF"
-          />
-          <figcaption>Tentacles animating around the player</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="Sources/Eclipsium/Images/tendrilsControls.png"
-            alt="Tentrifical shader control UI"
-          />
-          <figcaption>Shader parameter controls for the consumption tendrils</figcaption>
-        </figure>
+      <div class="image-gallery">
+        <img
+          src="Sources/Eclipsium/Images/Tendrils.gif"
+          alt="Tentacles animating around the player"
+        />
+        <img
+          src="Sources/Eclipsium/Images/tendrilsControls.png"
+          alt="Shader control interface for tentacle VFX"
+        />
       </div>
     </section>
-
-    <hr />
 
     <!-- Custom Spline, Mesh Deforming & Gravity Shifting -->
     <section class="container">
       <h2>Custom Spline, Mesh Deforming &amp; Gravity Shifting</h2>
 
-      <h3>Custom Spline - Core Classes &amp; Data Structures</h3>
-      <ul>
-        <li>
-          <strong>SplinePoint:</strong> Holds position, tangent handles, and a
-          “roll” angle to control twist.
-        </li>
-        <li>
-          <strong>SplineSegment:</strong> Connects two points with cubic
-          Bézier interpolation; exposes <code>GetPoint(t)</code>,
-          <code>GetTangent(t)</code>, and <code>GetNormal(t)</code> methods.
-        </li>
-        <li>
-          <strong>Spline:</strong> Manages an ordered list of points, builds an
-          array of segments on edit, and maintains a cached lookup table of
-          uniform‐length samples for fast runtime queries.
-        </li>
-      </ul>
-
-      <h4>Editor Integration</h4>
-      <ul>
-        <li>
-          Leveraged Unity’s <code>OnSceneGUI</code> to draw handles in Scene
-          view—points can be clicked, dragged, or deleted.
-        </li>
-        <li>
-          Custom inspector buttons (“Add Curve”, “Undo Last”) call repository
-          commands to modify the point list and auto-commit changes to version
-          control.
-        </li>
-      </ul>
-
-      <div class="image-grid">
-        <img
-          src="Sources/Eclipsium/Images/ConveyorSpline.png"
-          alt="Conveyor Spline editor screenshot"
-        />
-        <img
-          src="Sources/Eclipsium/Images/CustomSpline.png"
-          alt="Custom Spline points and handles"
-        />
-      </div>
-
-      <h3>Mesh Deformation Along Splines</h3>
-      <ul>
-        <li>
-          Built a deformation system that “bends” arbitrary meshes to follow
-          curves.
-        </li>
-        <li>
-          <strong>Vertex Remapping Algorithm:</strong> Each deformable mesh
-          uses a UV channel where U=distance along spline (0-1) and V=lateral
-          offset.
-        </li>
-        <li>
-          <strong>Sample Spline:</strong> For each vertex, sample
-          <code>position = spline.GetPoint(u)</code> and
-          <code>tangent = spline.GetTangent(u)</code>.
-        </li>
-        <li>
-          <strong>Construct Frenet Frame:</strong> Using tangent and the spline’s
-          up vector (or “roll”), compute a normal and binormal to form a full
-          local coordinate frame.
-        </li>
-        <li>
-          <strong>Apply Offset:</strong> Use the vertex’s original lateral offset
-          (V) along binormal so the mesh wraps smoothly around the path.
-        </li>
-      </ul>
-
-      <h3>Gravity Reorientation via Surface Normals</h3>
-      <ul>
-        <li>
-          For custom gravity moments (walking up walls, inverted slopes), wrote a
-          routine to dynamically shift the gravity vector to align with spline
-          normals.
-        </li>
-        <li>
-          <strong>Normal Extraction:</strong> At a player-attach point (e.g.
-          feet), sample the nearest spline normal via
-          <code>GetNormal(u)</code>. Blend normals if on multiple splines.
-        </li>
-        <li>
-          <strong>Gravity Vector Rotation:</strong> Set
-          <code>desiredDown = –sampledNormal</code>. Slerp between current gravity
-          and <code>desiredDown</code> over 0.25 s for a gentle world “rotation.”
-        </li>
-        <li>
-          <strong>Controller Integration:</strong> Feed updated gravity into
-          <code>controller.ApplyGravity(gravityVector)</code> and rotate player’s
-          root so “up” opposes gravity.
-        </li>
-        <li>
-          <strong>Edge Cases &amp; Stability:</strong> Clamp interpolation speed
-          mid-air to avoid camera flip.
-        </li>
-      </ul>
-
-      <div class="image-grid">
-        <img
-          src="Sources/Eclipsium/Images/Conveyors.gif"
-          alt="Conveyors and gravity reorientation demo"
-        />
-      </div>
-    </section>
-
-    <hr />
-
-    <!-- Editor Tool: Level Selector -->
-    <section class="container">
-      <h2>Editor Tool: Level Selector</h2>
+      <h3>Custom Spline Classes</h3>
       <p>
-        During ECLIPSIUM’s development, we followed a strict scene structure to
-        avoid merge conflicts and maximize productivity. To simplify opening
-        all required scenes for each level, I created a custom Editor tool.
+        I wrote core spline classes to support curves in the game:
+      </p>
+      <p>
+        <strong>SplinePoint:</strong> Stores position, tangent handles, and a
+        “roll” angle to manage twist.  
+        <strong>SplineSegment:</strong> Connects two points with a cubic Bézier
+        interpolation, exposing <code>GetPoint(t)</code>, <code>GetTangent(t)</code>,
+        and <code>GetNormal(t)</code>.  
+        <strong>Spline:</strong> Manages a list of points, builds segments on
+        edit, and caches uniform-length samples for real-time queries.
       </p>
 
-      <h3>Architectural Overview</h3>
-      <ul>
-        <li>
-          Uses a ScriptableObject approach to store required scenes and any
-          additional ones.
-        </li>
-        <li>
-          Inherits from <code>EditorWindow</code> to open a custom window and
-          allow user interaction.
-        </li>
-        <li>
-          Opens and closes scenes based on the user’s selection in that window.
-        </li>
-        <li>
-          Features a fast, intuitive search bar to filter available ScriptableObjects.
-        </li>
-      </ul>
-
-      <div class="image-grid">
-        <img
-          src="Sources/Eclipsium/Images/HowToUseTool.gif"
-          alt="How to use Level Selector tool GIF"
-        />
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Ebben. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+      <h3>Editor Integration</h3>
+      <p>
+        Using Unity’s <code>OnSceneGUI</code>, I drew point handles in the Scene
+        view so designers could click, drag, or delete spline points. Custom
+        inspector buttons like “Add Curve” and “Undo Last” updated the point list
