@@ -3,24 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Base href ensures all relative URLs resolve under /Portfolio/ -->
   <base href="/Portfolio/">
   <title>VESPER — Ebben’s Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Background Options:
-       1) Default gradient from styles.css applies automatically.
-       2) To use a blurred background-image instead, uncomment and replace PATH_TO_IMAGE.jpg:
-
-  <style>
+ <style>
     body {
-      background: url('PATH_TO_IMAGE.jpg') no-repeat center center fixed;
-      background-size: cover;
-      filter: blur(6px);
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
-    /* Note: if you uncomment the above, remove the gradient rule from styles.css or override it here. */
+
+    /* 1) Blurred background image */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('Sources/Vesper/Images/VesperCapsule4.png') no-repeat center center / cover;
+      filter: blur(8px);
+      z-index: -2;
+    }
+
+    /* 2) Semi-transparent purple overlay */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(
+        to bottom right,
+        rgba(107,13,173,0.6),
+        rgba(26,0,26,0.6)
+      );
+      z-index: -1;
+    }
   </style>
-  -->
 </head>
 <body>
   <!-- Header & Hero (Dark-Purple theme) -->
