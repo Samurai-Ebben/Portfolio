@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!-- Base href so all assets resolve under /Portfolio/ -->
+  <base href="/Portfolio/"/>
+  <title>EBBEN RING — Ebben’s Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Blurred background + purple overlay override -->
+  <style>
+    body {
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    /* 1) Blurred game title screen */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: url('Sources/Ebben-Ring/Images/TitleScreen2.png') no-repeat center/cover;
+      filter: blur(8px);
+      z-index: -2;
+    }
+    /* 2) Semi-transparent purple overlay */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: linear-gradient(
+        to bottom right,
+        rgba(107,13,173,0.6),
+        rgba(26,0,26,0.6)
+      );
+      z-index: -1;
+    }
+
+    /* Reuse gallery styling */
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 1rem; margin: 2rem 0;
+    }
+    .image-gallery img {
+      width: 100%; height: auto;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Section, heading, paragraph, and code styling as before */
+    section { padding: 3rem 0; }
+    section + section { border-top: 1px solid rgba(255,255,255,0.1); }
+    h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--light); }
+    h3 { font-size: 1.5rem; margin: 2rem 0 0.75rem; color: var(--light); }
+    p { margin-bottom: 1rem; line-height: 1.6; color: var(--light); }
+    pre {
+      background: rgba(0,0,0,0.6);
+      padding: 1rem; border-radius: var(--radius);
+      overflow-x: auto; margin-bottom: 2rem;
+    }
+    code {
+      color: #e0e0e0; font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+    }
+    .buttons { margin: 1rem 0; display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn, .btn.secondary {
+      padding: 0.6rem 1.2rem; border-radius: var(--radius);
+      font-weight: 600; text-decoration: none;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn {
+      background: var(--primary); color: #fff;
+    }
+    .btn:hover { background: #7a00cc; transform: translateY(-2px); }
+    .btn.secondary {
+      background: transparent; border: 2px solid var(--primary);
+      color: var(--light);
+    }
+    .btn.secondary:hover { background: var(--primary); color: #fff; }
+  </style>
+</head>
+<body>
+  <!-- Header & Hero -->
+  <header class="header">
+    <div class="hero container">
+      <h1>EBBEN RING</h1>
+      <p>
+        A 3D Souls-like built in Unreal Engine 5 with AngelScript—developed over 7 weeks at Yrgo,
+        focusing on precise combat, robust player mechanics, and dynamic environments.
+      </p>
+    </div>
+    <!-- Nav -->
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Portfolio Home</a></li>
+        <li><a href="index.html#game-projects">Projects</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- First four GIFs gallery -->
+    <div class="image-gallery">
+      <img src="Sources/Ebben-Ring/Images/comboSystem.gif" alt="Dynamic combo system"/>
+      <img src="Sources/Ebben-Ring/Images/TogglingLocks.gif" alt="Lock-on toggling demo"/>
+      <img src="Sources/Ebben-Ring/Images/DireRolls.gif" alt="Directional rolls"/>
+      <img src="Sources/Ebben-Ring/Images/DashAbility.gif" alt="Dash ability"/>
+    </div>
+
+    <!-- About Section -->
+    <section>
+      <h2>About the Project</h2>
+      <p>
+        EBBEN RING is a 3D action-RPG inspired by Soulsborne titles, built in UE5 with AngelScript.
+        Developed solo at Yrgo over 7 weeks for educational purposes, it features challenging combat,
+        immersive animations, and strategic gameplay. A key hurdle was ensuring animation smoothness—
+        I responded by crafting custom sequences and rich visual effects to bolster game feel.
+      </p>
+    </section>
+
+    <hr/>
+
+    <!-- Core Features Section -->
+    <section>
+      <h2>Core Features</h2>
+      <p>
+        The combat system emphasizes precise timing and strategy through:
+        Responsive attacks, dynamic combo chains that reward skilled inputs,
+        balanced damage mechanics for both player and enemies, and unique
+        abilities that diversify combat tactics.
+      </p>
+    </section>
+
+    <hr/>
+
+    <!-- Player Mechanics Section -->
+    <section>
+      <h2>Player Mechanics</h2>
+      <p>
+        Implemented entirely in AngelScript with a lightweight, modular design.
+        Key elements include attacking & damage dealing, stagger & recovery windows,
+        a fluid combo system, special abilities, directional rolls with input buffering,
+        and a finite-state machine (FSM) for clean animation transitions.
+      </p>
+
+      <h3>FSM Player State Controller</h3>
+      <p>
+        To prevent animation cancels from desynchronizing combat, I built an
+        FSM that broadcasts exit and entry events, ensuring controlled transitions.
+      </p>
+      <details>
+        <summary>Show FSM Controller Code</summary>
+        <pre><code>
+event void FStateEnterDelegate(EPlayerStates NewState);
+event void FStateExitDelegate(EPlayerStates NewState);
+
+class UPlayerStateManager: UActorComponent {
+    UPROPERTY() EPlayerStates CurrentState = EPlayerStates::Idle;
+    UPROPERTY() EPlayerStates PreviousState = EPlayerStates::Idle;
+    UPROPERTY() FStateEnterDelegate OnEnterState;
+    UPROPERTY() FStateExitDelegate OnExitState;
+
+    UFUNCTION(BlueprintOverride)
+    void BeginPlay() {
+        // Initialize owner reference …
+    }
+
+    UFUNCTION()
+    bool RequestStateChange(EPlayerStates NewState) {
+        if (CanTransition(NewState)) {
+            OnStateExit(CurrentState);
+            PreviousState = CurrentState;
+            CurrentState  = NewState;
+            OnStateEnter(CurrentState);
+            return true;
+        }
+        return false;
+    }
+
+    // … additional transition logic …
+}
+        </code></pre>
+      </details>
+
+      <h3>Directional Roll</h3>
+      <p>
+        Valid rolls only occur with directional input; otherwise the player performs
+        a brief invincible hop-back. The script calculates ideal roll vectors to help
+        dodge incoming attacks.
+      </p>
+      <figure class="image-gallery">
+        <img src="Sources/Ebben-Ring/Images/DireRolls.gif" alt="Directional roll demo"/>
+      </figure>
+      <details>
+        <summary>Show Roll Component Code</summary>
+        <pre><code>
+event void FOnRollUpdated(float Cost);
+
+class URollComponent: UActorComponent {
+    UPROPERTY() UAnimMontage RollAnim;
+    UPROPERTY() UAnimMontage HopBackAnim;
+    // … properties …
+
+    UFUNCTION()
+    void UpdateRoll(bool bHasDirection = false) {
+        if (!Player.HasEnoughStamina(StaminaCost)) return;
+        Player.TraceComponent.bInvincible = true;
+        if (bHasDirection) 
+            Player.PlayAnimMontage(RollAnim);
+        else 
+            Player.PlayAnimMontage(HopBackAnim);
+        OnRoll.Broadcast(StaminaCost);
+    }
+
+    FVector CalculateRollDirection() {
+        FVector Input = Player.GetLastMovementInputVector().GetSafeNormal();
+        return Input.IsNearlyZero() ? -Player.ActorForwardVector : Input;
+    }
+}
+        </code></pre>
+      </details>
+
+      <h3>Lock-On System</h3>
+      <p>
+        Allows targeting a single enemy and toggling smoothly among nearby foes.
+        The camera’s position and rotation are interpolated to lock onto the current target.
+      </p>
+      <figure class="image-gallery">
+        <img src="Sources/Ebben-Ring/Images/TogglingLocks.gif" alt="Lock-on system demo"/>
+      </figure>
+      <details>
+        <summary>Show Lock-On Component Code</summary>
+        <pre><code>
+UFUNCTION(BlueprintOverride)
+void Tick(float DeltaSeconds) {
+    if (IsValid(CurrentTarget)) {
+        FRotator Desired = FindLookAtRotation(PlayerLoc, TargetLoc);
+        Controller.SetControlRotation(
+            FMath::RInterpTo(Controller.GetControlRotation(), Desired, DeltaSeconds, 5.0f)
+        );
+    } else {
+        EndLockOn();
+    }
+}
+
+void ToggleLockOn() {
+    if (CurrentTarget) EndLockOn();
+    else StartLockOnWithTrace();
+}
+        </code></pre>
+      </details>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ebben. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
