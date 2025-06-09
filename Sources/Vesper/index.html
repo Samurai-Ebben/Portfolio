@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Base href ensures all relative paths resolve under /Portfolio/ -->
+  <base href="/Portfolio/" />
+  <title>VESPER — Ebben’s Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Inline override: blurred background + purple gradient overlay -->
+  <style>
+    body {
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    /* Blurred background image */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('Sources/Vesper/Images/vesper_thumb_35.png') no-repeat center center / cover;
+      filter: blur(8px);
+      z-index: -2;
+    }
+    /* Purple overlay */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(
+        to bottom right,
+        rgba(107, 13, 173, 0.6),
+        rgba(26, 0, 26, 0.6)
+      );
+      z-index: -1;
+    }
+    /* Gallery styling (same as ECLIPSIUM) */
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .image-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    /* Code block styling */
+    pre {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: var(--radius);
+      overflow-x: auto;
+      margin-bottom: 2rem;
+    }
+    code {
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+    }
+    /* Section spacing */
+    section {
+      padding: 3rem 0;
+    }
+    section + section {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: var(--light);
+    }
+    h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      color: var(--light);
+    }
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: var(--light);
+    }
+    /* Buttons */
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn, .btn.secondary {
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      text-decoration: none;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn:hover {
+      background: #7a00cc;
+      transform: translateY(-2px);
+    }
+    .btn.secondary {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--light);
+    }
+    .btn.secondary:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+  </style>
+  
+</head>
+<body>
+  <!-- Header & Hero -->
+  <header class="header">
+    <div class="hero container">
+      <h1>VESPER</h1>
+      <p>2D Platformer · Unity2D · DOTween · Input &amp; Particle Systems</p>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Portfolio Home</a></li>
+        <li><a href="index.html#game-projects">Projects</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content for VESPER -->
+  <main>
+    <!-- Banner Image -->
+    <!-- <section class="project-detail container">
+      <div class="project-banner">
+        <img
+          src="Sources/Vesper/Images/vesper_thumb_35.png"
+          alt="VESPER banner"
+        />
+      </div>
+    </section> -->
+
+    <!-- Summary Section -->
+    <section class="container">
+      <h2>Summary of the Project</h2>
+      <p>
+        Vesper was a 7-week game project at Yrgo. You can play it on
+        <a href="https://yrgo-game-creator.itch.io/vesper" class="btn"
+          >Vesper ITCH.IO</a
+        >.
+      </p>
+      <p>
+        Vesper is a skill-based puzzle platformer where you play as a formless
+        celestial being trapped in a physical form. Use the ability to change
+        sizes to find your way home.
+      </p>
+      <!-- First four images as a centered gallery -->
+      <div class="image-gallery">
+        <img
+          src="Sources/Vesper/Images/Screenshot2024-01-04145910.png"
+          alt="Vesper screenshot 1"
+        />
+        <img
+          src="Sources/Vesper/Images/3G5X+H.png"
+          alt="Vesper screenshot 2"
+        />
+        <img
+          src="Sources/Vesper/Images/vesper_trailer_v2.gif"
+          alt="Vesper trailer"
+        />
+        <img
+          src="Sources/Vesper/Images/Screenshot2024-01-04150218.png"
+          alt="Vesper screenshot 3"
+        />
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- Main Mechanics Section -->
+    <section class="container">
+      <h2>Main Mechanics</h2>
+      <p>
+        The three core mechanics are <strong>player movement</strong>, <strong>switching sizes</strong>,
+        and the <strong>vent (labyrinth) movement</strong>. I was responsible for implementing each.
+      </p>
+
+      <!-- Player Movement Sub-Section -->
+      <article>
+        <h3>Player Movement</h3>
+        <p>
+          From the first prototype to the final version, I refined movement to be as smooth and responsive as possible.
+          Below is a before‐and‐after comparison.
+        </p>
+        <div class="image-gallery">
+          <figure>
+            <img
+              src="Sources/Vesper/Images/1stWeekMovement.gif"
+              alt="Initial movement prototype"
+            />
+            <figcaption>Initial movement prototype (Week 1)</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="Sources/Vesper/Images/nowMovement.gif"
+              alt="Refined movement"
+            />
+            <figcaption>Refined movement after optimization</figcaption>
+          </figure>
+        </div>
+        <p>
+          We used Unity’s <strong>Input System</strong> with events and delegates to handle precise, buffered jumps and movement:
+        </p>
+        <details>
+          <summary>Show Input functions</summary>
+          <pre><code>
+// Called when Move input is performed or canceled
+public void Move(InputAction.CallbackContext ctx)
+{
+    moveInput = ctx.ReadValue<Vector2>;();
+}
+
+void OnJumpStarted(InputAction.CallbackContext ctx)
+{
+    startedJump = true;
+    if (ctx.performed)
+    {
+        jumpBufferTimer = jumpBufferTime;
+        jumpPressed = true;
+    }
+}
+
+void OnJumpCanceled(InputAction.CallbackContext ctx)
+{
+    jumpBufferTimer -= jumpBufferTime;
+    if (!ctx.performed && rb.velocity.y > 0)
+    {
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutOff);
+        coyoteTimer = 0;
+    }
+}
+          </code></pre>
+          <p>These functions were bound like this:</p>
+          <pre><code>
+// Example of binding
+actions["Jump"].performed += OnJumpStarted;
+actions["Jump"].canceled  += OnJumpCanceled;
+          </code></pre>
+        </details>
+      </article>
+
+      <hr />
+
+      <!-- Switching Sizes Sub-Section -->
+      <article>
+        <h3>Switching Sizes</h3>
+        <p>
+          Switching sizes changes the player’s scale and stats at runtime. We stored three presets (<em>Big</em>, <em>Medium</em>, <em>Small</em>) and simply applied the corresponding values when the player pressed a size key.
+        </p>
+        <div class="image-gallery">
+          <figure>
+            <img
+              src="Sources/Vesper/Images/Switch2.gif"
+              alt="Switch to Large"
+            />
+            <figcaption>Player switches to Large size</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="Sources/Vesper/Images/Switch.gif"
+              alt="Switch to Small"
+            />
+            <figcaption>Player switches to Small size</figcaption>
+          </figure>
+        </div>
+        <details>
+          <summary>SizeStats Script</summary>
+          <pre><code>
+public class SizeStats : MonoBehaviour
+{
+    #region StatsLists
+    List<float> statsSmall, statsMedium, statsLarge;
+    #endregion
+
+    #region SizeParameters
+    [Header("Size Parameters")]
+    [Range(0,3)] public float sizeSmall  = 0.25f;
+    [Range(0,3)] public float sizeMedium = 0.75f;
+    [Range(0,3)] public float sizeLarge  = 1.25f;
+    #endregion
+
+    #region MovementStats
+    [Header("Movement Stats")]
+    [Range(0,100)] public float speedSmall  = 10;
+    [Range(0,100)] public float speedMedium = 6;
+    [Range(0,100)] public float speedLarge  = 4;
+
+    [Space(10)]
+    [Range(0,100)] public float accelerationSmall  = 30;
+    [Range(0,100)] public float accelerationMedium = 20;
+    [Range(0,100)] public float accelerationLarge  = 10;
+
+    [Space(10)]
+    [Range(0,100)] public float deaccelerationSmall  = 10;
+    [Range(0,100)] public float deaccelerationMedium = 20;
+    [Range(0,100)] public float deaccelerationLarge  = 30;
+    #endregion
+
+    #region JumpStats
+    [Header("Jump Stats")]
+    [Range(0,50)] public float jumpHeightSmall  = 4;
+    [Range(0,50)] public float jumpHeightMedium = 6;
+    [Range(0,50)] public float jumpHeightLarge  = 8;
+
+    [Space(10)]
+    [Range(0,100)] public float fallSpeedSmall  = 1;
+    [Range(0,100)] public float fallSpeedMedium = 2;
+    [Range(0,100)] public float fallSpeedLarge  = 3;
+
+    [Space(10)]
+    [Range(0,1)] public float jumpCutOffSmall  = 0.5f;
+    [Range(0,1)] public float jumpCutOffMedium = 0.1f;
+    [Range(0,1)] public float jumpCutOffLarge  = 0.005f;
+    #endregion
+
+    #region GroundCheckSizes
+    [Header("Ground Check Sizes")]
+    float groundCheckSizeSmallX, groundCheckSizeMediumX, groundCheckSizeLargeX;
+    float groundCheckSizeSmallY, groundCheckSizeMediumY, groundCheckSizeLargeY;
+    #endregion
+
+    #region AirMultipliers
+    [Header("Air Multipliers")]
+    [Range(0,10)] public float airSpeedMultiSmall  = 0.9f;
+    [Range(0,10)] public float airSpeedMultiMedium = 1f;
+    [Range(0,10)] public float airSpeedMultiLarge  = 1f;
+
+    [Space(10)]
+    [Range(0,10)] public float airAccMultiSmall  = 1f;
+    [Range(0,10)] public float airAccMultiMedium = 1f;
+    [Range(0,10)] public float airAccMultiLarge  = 1f;
+
+    [Space(10)]
+    [Range(0,10)] public float airDecMultiSmall  = 0.9f;
+    [Range(0,10)] public float airDecMultiMedium = 0.9f;
+    [Range(0,10)] public float airDecMultiLarge  = 0.9f;
+    #endregion
+
+    #region LandingSfxOffsets
+    [Header("Landing SFX Offsets")]
+    public float landingSfxOffsetSmall  = 0.05f;
+    public float landingSfxOffsetMedium = 0.1f;
+    public float landingSfxOffsetLarge  = 0.5f;
+    #endregion
+
+    void Start()
+    {
+        UpdateStatValues();
+    }
+
+    public List<float> ReturnStats(Sizes size)
+    {
+        if (size == Sizes.SMALL) return statsSmall;
+        if (size == Sizes.BIG) return statsLarge;
+        return statsMedium;
+    }
+
+    private void UpdateStatValues()
+    {
+        // (Populate stats lists as before…)
+    }
+}
+          </code></pre>
+        </details>
+      </article>
+
+      <hr />
+
+      <!-- Vent Movement Sub-Section -->
+      <article>
+        <h3>Vent Movement</h3>
+        <p>
+          Vent (labyrinth) movement is a continuous motion from A to Z with no
+          ability to stop mid-path—only to redirect. I implemented this gameplay
+          feature to add a unique puzzle challenge.
+        </p>
+        <div class="image-gallery">
+          <img
+            src="Sources/Vesper/Images/LabyrinthMovement.gif"
+            alt="Vent movement GIF"
+          />
+        </div>
+        <details>
+          <summary>VentMovement Script</summary>
+          <pre><code>
+public class VentMovement : MonoBehaviour, IReset
+{
+    public float moveSpeed = 5f;
+    public bool canMoveRight, canMoveUp, canMoveDown, canMoveLeft;
+    private Vector2 input, inputDirection, bufferedInput;
+    public Vector3 prevPos;
+    public float deadZone = 0.9f;
+
+    Transform player;
+    Rigidbody2D rb;
+    InputActionAsset actions;
+    RayCastHandler rayCastHandler;
+
+    private void Start()
+    {
+        rayCastHandler = GetComponent<RayCastHandler>();
+        rb = GetComponent<Rigidbody2D>();
+        player = PlayerController.player.transform;
+        RegisterSelfToResettableManager();
+    }
+
+    private void OnEnable()
+    {
+        actions = GetComponent<PlayerInput>().actions;
+        actions["Vent"].performed  += OnMove;
+        actions["Vent"].canceled   += OnMoveCancel;
+        actions.Enable();
+        inputDirection = PlayerController.instance.moveInput;
+    }
+
+    private void OnDisable()
+    {
+        actions["Vent"].performed  -= OnMove;
+        actions["Vent"].canceled   -= OnMoveCancel;
+        input = Vector2.zero;
+    }
+
+    void Update()
+    {
+        MoveBuffer();
+        Move();
+    }
+
+    void OnMove(InputAction.CallbackContext ctx)
+    {
+        input = ctx.ReadValue<Vector2>();
+        MaxInput();
+    }
+
+    void MaxInput()
+    {
+        if (Mathf.Abs(input.x) > Mathf.Abs(input.y)) input.y = 0;
+        else input.x = 0;
+    }
+
+    void OnMoveCancel(InputAction.CallbackContext ctx)
+    {
+        input = Vector2.zero;
+    }
+
+    void MoveBuffer()
+    {
+        if (input.x > deadZone)
+        {
+            if (canMoveRight) { inputDirection.x = 1; inputDirection.y = 0; bufferedInput = Vector2.zero; return; }
+            else bufferedInput = new Vector2(1, 0);
+        }
+        if (input.x < -deadZone)
+        {
+            if (canMoveLeft) { inputDirection.x = -1; inputDirection.y = 0; bufferedInput = Vector2.zero; return; }
+            else bufferedInput = new Vector2(-1, 0);
+        }
+        if (input.y > deadZone)
+        {
+            if (canMoveUp) { inputDirection.y = 1; inputDirection.x = 0; bufferedInput = Vector2.zero; return; }
+            else bufferedInput = new Vector2(0, 1);
+        }
+        if (input.y < -deadZone)
+        {
+            if (canMoveDown) { inputDirection.y = -1; inputDirection.x = 0; bufferedInput = Vector2.zero; return; }
+            else bufferedInput = new Vector2(0, -1);
+        }
+    }
+
+    void Move()
+    {
+        rb.gravityScale = 0;
+        canMoveUp    = rayCastHandler.smallTopIsFree;
+        canMoveDown  = rayCastHandler.smallDownIsFree;
+        canMoveLeft  = rayCastHandler.leftSide;
+        canMoveRight = rayCastHandler.rightSide;
+
+        if (bufferedInput != Vector2.zero)
+        {
+            bool canProceedX = (bufferedInput.x != 0) && (canMoveRight || canMoveLeft);
+            bool canProceedY = (bufferedInput.y != 0) && (canMoveUp || canMoveDown);
+            rb.velocity = canProceedX || canProceedY
+              ? bufferedInput * moveSpeed
+              : inputDirection * moveSpeed;
+        }
+        else
+        {
+            rb.velocity = inputDirection * moveSpeed;
+        }
+
+        if (Vector3.Distance(transform.position, prevPos) < 0.005f)
+            bufferedInput = Vector2.zero;
+
+        prevPos = transform.position;
+    }
+}
+          </code></pre>
+        </details>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ebben. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
