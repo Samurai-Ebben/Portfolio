@@ -12,6 +12,8 @@ Vesper was a 7 weeks game project that was pitched by my classmate at Yrgo.You c
 Vesper is a skill-based puzzle platformer where you play as a formless celestial being
 that has been trapped in a physical form. Use the ability to change sizes to find your way home.
 
+My part was creating the core mechanics and some of the gameplay systems you will read shortly about, and also create most of the UI and manage the programming team of 3 devs.
+
 ## Main Mechanics 
 As a 2D fast-paced platformer, one of the most important main mechanics is the
 *player movement*, *changing* sizes, and the *particle system*. I was mostly responsible for the implementation of these mechanisms. 
