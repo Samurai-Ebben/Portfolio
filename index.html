@@ -2,160 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <base href="/Portfolio/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ebben's Portfolio</title>
+  <meta
+    name="description"
+    content="Explore Ebben's game development and software development work."
+  >
+
+  <title>Ebben | Developer Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/landing.css">
 </head>
-<body>
-  <!-- Header with gradient background and creative styling -->
-  <header class="header">
-    <div class="hero container">
-      <h1>Ebben's Portfolio</h1>
-      <!-- <p>Gameplay programming · Player mechanics · AI · Shaders · UI · Editor tools</p> -->
-      
-      <div class="social">
-        <a href="mailto:abdalrahman.alhindi48@gmail.com" aria-label="Email" class="social-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 4H20V20H4V4Z" fill="none"/><path d="M22 6L12 13L2 6V6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6Z"/>
-            <path d="M2 8V18C2 18.5523 2.44772 19 3 19H21C21.5523 19 22 18.5523 22 18V8L12 15L2 8Z"/>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/abdalrhman-m-alhindi/" target="_blank" aria-label="LinkedIn" class="social-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4.98 3.5C4.98 4.88071 3.88071 6 2.5 6C1.11929 6 0 4.88071 0 3.5C0 2.11929 1.11929 1 2.5 1C3.88071 1 4.98 2.11929 4.98 3.5Z"/>
-            <path d="M0 8H5V24H0V8Z"/>
-            <path d="M7 8H12V10.4H12.1C12.8 9.1 14.7 7.6 17.2 7.6C22 7.6 24 10.6 24 16.1V24H19V16.9C19 14 18.9 10.8 15 10.8C11.1 10.8 10.7 13.5 10.7 16.7V24H7V8Z"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <!-- Interactive navigation bar with icons and dynamic shape -->
-    <nav class="nav container">
-      <ul>
-        <li><a href="#game-projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="https://github.com/Samurai-Ebben">Github</a></li>
-      </ul>
+
+<body class="landing-page">
+  <main class="landing">
+    <header class="landing__intro">
+      <p class="landing__name">Ebben — Developer</p>
+
+      <h1>
+        I build programs, solve problems, and turn ideas into fun algorithms.
+      </h1>
+
+      <p class="landing__prompt">Choose a field to explore my work.</p>
+    </header>
+
+    <nav class="portfolio-choices" aria-label="Choose a portfolio">
+      <a class="portfolio-choice" href="GameDev/">
+        <h2>Game Development</h2>
+        <p>Games, gameplay systems, and interactive ideas.</p>
+        <span>Explore games <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="portfolio-choice" href="SoftwareDev/">
+        <h2>Software Development</h2>
+        <p>Applications, tools, and practical solutions.</p>
+        <span>Explore software <span aria-hidden="true">→</span></span>
+      </a>
     </nav>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <section id="game-projects" class="projects container">
-      <h2>Game Projects</h2>
-      <div class="project-grid">
-        <!-- ECLIPSIUM -->
-        <div class="project-card">
-          <div class="thumbnail">
-            <img src="Sources/Eclipsium/Images/Thumbnail.png" alt="ECLIPSIUM">
-            <div class="overlay">
-              <h3>ECLIPSIUM</h3>
-              <p>Housefire Games · Unity · Scriptable Objects · Object pooling</p>
-              <div class="buttons">
-                <a href="https://store.steampowered.com/app/2419670/Eclipsium/" class="btn">Steam</a>
-                <a href="Sources/Eclipsium/" class="btn secondary">More Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- VESPER -->
-        <div class="project-card">
-          <div class="thumbnail">
-            <img src="Sources/Vesper/Images/vesper_thumb_35.png" alt="VESPER">
-            <div class="overlay">
-              <h3>VESPER</h3>
-              <p>2D platformer · Unity2D · DOTween · Input & Particle Systems</p>
-              <div class="buttons">
-                <a href="https://yrgo-game-creator.itch.io/vesper" class="btn">Play</a>
-                <a href="Sources/Vesper/" class="btn secondary">More Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Additional project-cards as needed -->
-      </div>
-    </section>
-
-    <section id="game-projects" class="projects container">
-      <h2>Thesis Project</h2>
-      <div class="project-grid">
-        
-        <!-- Ebben ring -->
-        <div class="project-card">
-          <div class="thumbnail">
-            <img src="Sources/Ebben-Ring/Images/Ebben-RingTitle.jpg" alt="VESPER">
-            <div class="overlay">
-              <h3>Ebben ring</h3>
-              <p>2D Souls-like · UE5 · <b>AngelScript</b> · Data assets</p>
-              <div class="buttons">
-                <a href="Sources/Ebben-Ring/" class="btn secondary">More Details</a>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-
-        <!-- Additional project-cards as needed -->
-      </div>
-    </section>
-
-    <!-- Skills Section separated clearly -->
-    <section id="skills" class="about container">
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> C#, C++, Java, Python, AngelScript, Html, css, JavaScript</li>
-        <li><strong>Libraries/APIs & other:</strong> Angular , .Net, Node.js, React, Docker</li>
-        <li><strong>Engines:</strong> Unity, Unreal Engine 4/5</li>
-        <li>Fast learner & adaptable under pressure</li>
-        <li>Time & project management</li>
-        <li>Problem solving & multitasking</li>
-      </ul>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="education container">
-      <h2>Education</h2>
-      <ul>
-        <li>Game Creator Programmer — Yrgo, 2025</li>
-        <li>System Development — Högskolan i Skövde, 2025</li>
-        <li>Computer Technology — Linnuaes University, 2023</li>
-        <li>Game Development — Blekinge Teksniska Högskolan, 2022</li>
-        <li><a href="https://www.credly.com/badges/b8378b37-06ee-4570-a708-e0825a83b21f/public_url" target="_blank">Unity Junior Programmer</a></li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact container">
-      <h2>Contact</h2>
-      <div class="social">
-        <a href="https://www.linkedin.com/in/abdalrhman-m-alhindi/" target="_blank" aria-label="LinkedIn" class="social-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4.98 3.5C4.98 4.88071 3.88071 6 2.5 6C1.11929 6 0 4.88071 0 3.5C0 2.11929 1.11929 1 2.5 1C3.88071 1 4.98 2.11929 4.98 3.5Z"/>
-            <path d="M0 8H5V24H0V8Z"/>
-            <path d="M7 8H12V10.4H12.1C12.8 9.1 14.7 7.6 17.2 7.6C22 7.6 24 10.6 24 16.1V24H19V16.9C19 14 18.9 10.8 15 10.8C11.1 10.8 10.7 13.5 10.7 16.7V24H7V8Z"/>
-          </svg>
-        </a>
-      </div>
-      <!-- <p><a href="Sources/CVGameDev.pdf" download class="btn">Download CV</a></p> -->
-      <div class="dropdown">
-        <button class="btn">Download CV ▾</button>
-
-        <div class="dropdown-content">
-          <a href="Sources/GameProgrammerCV.pdf" download>Game Dev CV</a>
-          <a href="Sources/WebdevloperCV.pdf" download>Web Dev CV</a>
-          <a href="Sources/SoftwareDevCV.pdf" download>Software Dev CV</a>
-        </div>
-      </div>
-    </section>
   </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Ebben. All rights reserved.</p>
-  </footer>
 </body>
 </html>

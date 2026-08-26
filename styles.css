@@ -3,7 +3,7 @@
   --gradient-end: #1f001f;
   --primary: #9b30ff;
   --light: #e0e0e0;
-  --card-bg: rgba(0,0,0,0.5);
+  --card-bg: rgba(0, 0, 0, 0.5);
   --overlay-bg: rgba(26, 0, 26, 0.85);
   --radius: 12px;
   --transition: 0.4s;
@@ -23,28 +23,61 @@ body {
   line-height: 1.6;
 }
 
-.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-/* Header / Hero */
-.header .hero {
+section {
   padding: 4rem 0;
-  text-align: center;
+}
+
+section + section {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+section h2 {
+  margin-bottom: 2rem;
   color: var(--light);
+  font-size: 2.5rem;
+  text-align: center;
 }
 
-.header .hero h1 {
-  font-size: 3rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+section h2::after {
+  content: '';
+  width: 80px;
+  height: 5px;
+  margin: 0.5rem auto 0;
+  display: block;
+  background: var(--primary);
 }
 
-.header .hero p {
-  margin-top: 1rem;
-  font-size: 1.2rem;
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition);
 }
 
-/* Social Icons under Hero */
+.btn:hover {
+  background: #7a00cc;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  border: 2px solid var(--primary);
+  background: transparent;
+}
+
+.btn.secondary:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
 .social {
   margin-top: 1.5rem;
   display: flex;
@@ -63,159 +96,30 @@ body {
   fill: var(--primary);
 }
 
-/* Navigation Bar */
-.nav {
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius) var(--radius) 0 0;
+.about ul,
+.education ul {
+  max-width: 600px;
   margin: 0 auto;
-}
-
-.nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  padding: 1rem;
 }
 
-.nav a {
+.about li,
+.education li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact p,
+.contact a {
+  margin-bottom: 0.5rem;
   color: var(--light);
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  padding-bottom: 5px;
-}
-
-.nav a::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 3px;
-  background: var(--primary);
-  bottom: 0;
-  left: 50%;
-  transition: width var(--transition), left var(--transition);
-}
-
-.nav a:hover::before {
-  width: 100%;
-  left: 0;
-}
-
-/* Sections */
-section { padding: 4rem 0; }
-section + section { border-top: 1px solid rgba(255,255,255,0.1); }
-section h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: var(--light);
-}
-section h2::after {
-  content: '';
-  width: 80px;
-  height: 5px;
-  background: var(--primary);
-  display: block;
-  margin: 0.5rem auto 0;
 }
 
-/* Project Cards with hover overlay */
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-
-.project-card {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-}
-
-.project-card .thumbnail img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform var(--transition);
-}
-.project-card:hover .thumbnail img { transform: scale(1.1); }
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: var(--overlay-bg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity var(--transition);
-  text-align: center;
-  padding: 1.5rem;
-}
-.project-card:hover .overlay { opacity: 1; }
-.overlay h3 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-.overlay p { font-size: 1rem; margin-bottom: 1rem; line-height: 1.4; }
-
-.buttons { display: flex; gap: 1rem; }
-.btn {
-  background: var(--primary);
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: var(--radius);
-  text-decoration: none;
-  font-weight: 600;
-  transition: background var(--transition), transform var(--transition);
-}
-.btn:hover { background: #7a00cc; transform: translateY(-2px); }
-
-.btn.secondary { background: transparent; border: 2px solid var(--primary); }
-.btn.secondary:hover { background: var(--primary); color: #fff; }
-
-/* About & Education Lists */
-.about ul, .education ul { list-style: none; max-width: 600px; margin: 0 auto; }
-.about li, .education li { font-size: 1.1rem; margin-bottom: 1rem; }
-
-/* Contact */
-.contact p, .contact a { text-align: center; color: var(--light); margin-bottom: 0.5rem; }
-
-.contact .btn { margin-top: 1rem; }
-
-/* Footer */
 .footer {
-  background: rgba(0,0,0,0.5);
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background: rgba(0, 0, 0, 0.5);
   color: var(--light);
   text-align: center;
-  padding: 2rem 0;
-  margin-top: 3rem;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background: white;
-  min-width: 180px;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.dropdown-content a:hover {
-  background: #f1f1f1;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
 }
