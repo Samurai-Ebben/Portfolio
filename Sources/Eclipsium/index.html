@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Base href ensures all relative paths resolve under /Portfolio/ -->
-  <base href="/Portfolio/" />
   <title>ECLIPSIUM — Ebben’s Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../styles/game.css" />
+  <link rel="stylesheet" href="../../styles/game-detail.css" />
 
   <!-- Inline override: blurred OldPlaneteriumPuzzle background + purple overlay -->
   <style>
@@ -23,7 +23,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: url('Sources/Eclipsium/Images/Thumbnail.png') no-repeat center center / cover;
+      background: url('Images/Thumbnail.png') no-repeat center center / cover;
       filter: blur(8px);
       z-index: -2;
     }
@@ -124,7 +124,7 @@
     }
   </style>
 </head>
-<body>
+<body class="game-page game-detail-page eclipsium-detail">
   <!-- Header & Hero -->
   <header class="header">
     <div class="hero container">
@@ -138,11 +138,11 @@
     <!-- Navigation Bar -->
     <nav class="nav">
       <ul>
-        <li><a href="index.html">Portfolio Home</a></li>
-        <li><a href="index.html#game-projects">Projects</a></li>
-        <li><a href="index.html#skills">Skills</a></li>
-        <li><a href="index.html#education">Education</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="../../GameDev/">Game portfolio</a></li>
+        <li><a href="../../GameDev/#game-projects">Projects</a></li>
+        <li><a href="../../GameDev/#skills">Skills</a></li>
+        <li><a href="../../GameDev/#education">Education</a></li>
+        <li><a href="../../GameDev/#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -202,7 +202,7 @@
 
       <div class="image-gallery">
         <img
-          src="Sources/Eclipsium/Images/OldPlaneteriumPuzzle.gif"
+            src="Images/OldPlaneteriumPuzzle.gif"
           alt="Old Planeterium Puzzle GIF (Spline-Sync Demo)"
         />
       </div>
@@ -234,11 +234,11 @@
 
       <div class="image-gallery">
         <img
-          src="Sources/Eclipsium/Images/Tendrils.gif"
+            src="Images/Tendrils.gif"
           alt="Tentacles animating around the player"
         />
         <img
-          src="Sources/Eclipsium/Images/tendrilsControls.png"
+            src="Images/tendrilsControls.png"
           alt="Shader control interface for tentacle VFX"
         />
       </div>
@@ -272,11 +272,11 @@
 
       <div class="image-gallery">
         <img
-          src="Sources/Eclipsium/Images/ConveyorSpline.png"
+            src="Images/ConveyorSpline.png"
           alt="Conveyor spline editor screenshot"
         />
         <img
-          src="Sources/Eclipsium/Images/CustomSpline.png"
+            src="Images/CustomSpline.png"
           alt="Custom spline handles and points"
         />
       </div>
@@ -316,7 +316,7 @@
 
       <div class="image-gallery">
         <img
-          src="Sources/Eclipsium/Images/Conveyors.gif"
+            src="Images/Conveyors.gif"
           alt="Conveyors and gravity reorientation demo"
         />
       </div>
@@ -340,7 +340,7 @@
 
       <div class="image-gallery">
         <img
-          src="Sources/Eclipsium/Images/HowToUseTool.gif"
+            src="Images/HowToUseTool.gif"
           alt="How to use Level Selector tool GIF"
         />
       </div>

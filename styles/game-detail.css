@@ -1,0 +1,138 @@
+.game-detail-page {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.game-detail-page .header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(8, 3, 12, 0.58);
+  backdrop-filter: blur(8px);
+}
+
+.game-detail-page .header .hero {
+  padding: 4rem 0 3rem;
+  color: var(--light);
+  text-align: center;
+}
+
+.game-detail-page .header .hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.game-detail-page .header .hero p {
+  max-width: 850px;
+  margin: 1.25rem auto 0;
+  color: var(--game-muted);
+  font-size: 1.15rem;
+}
+
+.game-detail-page .nav {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(8, 3, 12, 0.72);
+}
+
+.game-detail-page .nav ul {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  list-style: none;
+}
+
+.game-detail-page .nav a {
+  color: var(--game-muted);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.game-detail-page .nav a:hover {
+  color: var(--primary);
+}
+
+.game-detail-page .nav a:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.game-detail-page main {
+  padding-bottom: 2rem;
+}
+
+.game-detail-page section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.game-detail-page section h2::after {
+  width: 60px;
+  height: 3px;
+  margin: 0.6rem 0 0;
+}
+
+.game-detail-page .image-gallery {
+  align-items: start;
+}
+
+.game-detail-page .image-gallery img {
+  max-width: 100%;
+}
+
+.game-detail-page details {
+  margin: 1rem 0 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(8, 3, 12, 0.58);
+}
+
+.game-detail-page summary {
+  padding: 1rem;
+  color: var(--primary);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.game-detail-page details pre {
+  margin: 0 1rem 1rem;
+}
+
+.game-detail-page .btn:hover {
+  background: #ff9b52;
+}
+
+.game-detail-page .btn.secondary:hover {
+  background: var(--primary);
+  color: #160608;
+}
+
+.game-detail-page .footer {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .game-detail-page .header .hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .game-detail-page .header .hero p {
+    font-size: 1rem;
+  }
+
+  .game-detail-page .nav ul {
+    justify-content: flex-start;
+    gap: 0.75rem 1.25rem;
+  }
+
+  .game-detail-page .image-gallery {
+    grid-template-columns: 1fr;
+  }
+}

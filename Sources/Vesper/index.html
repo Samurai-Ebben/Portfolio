@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Base href ensures all relative paths resolve under /Portfolio/ -->
-  <base href="/Portfolio/" />
   <title>VESPER — Ebben’s Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../../styles/game.css" />
+  <link rel="stylesheet" href="../../styles/game-detail.css" />
 
   <!-- Inline override: blurred background + purple gradient overlay -->
   <style>
@@ -23,7 +23,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: url('Sources/Vesper/Images/vesper_thumb_35.png') no-repeat center center / cover;
+      background: url('Images/vesper_thumb_35.png') no-repeat center center / cover;
       filter: blur(8px);
       z-index: -2;
     }
@@ -125,7 +125,7 @@
   </style>
   
 </head>
-<body>
+<body class="game-page game-detail-page vesper-detail">
   <!-- Header & Hero -->
   <header class="header">
     <div class="hero container">
@@ -135,11 +135,11 @@
     <!-- Navigation Bar -->
     <nav class="nav">
       <ul>
-        <li><a href="index.html">Portfolio Home</a></li>
-        <li><a href="index.html#game-projects">Projects</a></li>
-        <li><a href="index.html#skills">Skills</a></li>
-        <li><a href="index.html#education">Education</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="../../GameDev/">Game portfolio</a></li>
+        <li><a href="../../GameDev/#game-projects">Projects</a></li>
+        <li><a href="../../GameDev/#skills">Skills</a></li>
+        <li><a href="../../GameDev/#education">Education</a></li>
+        <li><a href="../../GameDev/#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -150,7 +150,7 @@
     <!-- <section class="project-detail container">
       <div class="project-banner">
         <img
-          src="Sources/Vesper/Images/vesper_thumb_35.png"
+          src="Images/vesper_thumb_35.png"
           alt="VESPER banner"
         />
       </div>
@@ -173,19 +173,19 @@
       <!-- First four images as a centered gallery -->
       <div class="image-gallery">
         <img
-          src="Sources/Vesper/Images/Screenshot2024-01-04145910.png"
+            src="Images/Screenshot2024-01-04145910.png"
           alt="Vesper screenshot 1"
         />
         <img
-          src="Sources/Vesper/Images/3G5X+H.png"
+            src="Images/3G5X+H.png"
           alt="Vesper screenshot 2"
         />
         <img
-          src="Sources/Vesper/Images/vesper_trailer_v2.gif"
+            src="Images/vesper_trailer_v2.gif"
           alt="Vesper trailer"
         />
         <img
-          src="Sources/Vesper/Images/Screenshot2024-01-04150218.png"
+            src="Images/Screenshot2024-01-04150218.png"
           alt="Vesper screenshot 3"
         />
       </div>
@@ -211,14 +211,14 @@
         <div class="image-gallery">
           <figure>
             <img
-              src="Sources/Vesper/Images/1stWeekMovement.gif"
+            src="Images/1stWeekMovement.gif"
               alt="Initial movement prototype"
             />
             <figcaption>Initial movement prototype (Week 1)</figcaption>
           </figure>
           <figure>
             <img
-              src="Sources/Vesper/Images/nowMovement.gif"
+            src="Images/nowMovement.gif"
               alt="Refined movement"
             />
             <figcaption>Refined movement after optimization</figcaption>
@@ -276,14 +276,14 @@ actions["Jump"].canceled  += OnJumpCanceled;
         <div class="image-gallery">
           <figure>
             <img
-              src="Sources/Vesper/Images/Switch2.gif"
+            src="Images/Switch2.gif"
               alt="Switch to Large"
             />
             <figcaption>Player switches to Large size</figcaption>
           </figure>
           <figure>
             <img
-              src="Sources/Vesper/Images/Switch.gif"
+            src="Images/Switch.gif"
               alt="Switch to Small"
             />
             <figcaption>Player switches to Small size</figcaption>
@@ -402,7 +402,7 @@ public class SizeStats : MonoBehaviour
         </p>
         <div class="image-gallery">
           <img
-            src="Sources/Vesper/Images/LabyrinthMovement.gif"
+            src="Images/LabyrinthMovement.gif"
             alt="Vent movement GIF"
           />
         </div>
