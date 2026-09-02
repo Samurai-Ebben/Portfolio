@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reusable Weapon System — Ebben’s Portfolio</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../styles/game.css">
+  <link rel="stylesheet" href="../../styles/game-detail.css">
+  <link rel="stylesheet" href="../../styles/game-product.css">
+</head>
+<body class="game-page game-detail-page game-product-page">
+  <header class="header">
+    <div class="hero container">
+      <p class="game-project-label">Unity asset · Product development</p>
+      <h1>Reusable Weapon System</h1>
+      <p>
+        A modular weapon framework built as a dependable product for other Unity
+        developers, with a clear setup workflow and room for project-specific behavior.
+      </p>
+      <img
+        class="product-hero-image"
+        src="card.jpg"
+        alt="Reusable Weapon System product card"
+      >
+    </div>
+
+    <nav class="nav" aria-label="Project navigation">
+      <ul>
+        <li><a href="../../GameDev/">Game portfolio</a></li>
+        <li><a href="#process">Development process</a></li>
+        <li><a href="#demonstration">Demonstration</a></li>
+        <li><a href="#testing">Testing</a></li>
+        <li><a href="#workflow">Unity workflow</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2>Built as a product, not a one-off feature</h2>
+      <p>
+        I created the system to support both manual and automatic weapons without
+        locking a developer into a specific input, targeting, inventory, or character
+        setup. The challenge was not simply making a weapon fire; it was defining clean
+        boundaries so the same foundation could be reused across different games.
+      </p>
+
+      <div class="product-summary">
+        <article>
+          <h3>Configurable</h3>
+          <p>Weapon behavior and balance data can be authored without rewriting the core system.</p>
+        </article>
+        <article>
+          <h3>Extensible</h3>
+          <p>Projects can provide their own attack behavior, presentation, and surrounding systems.</p>
+        </article>
+        <article>
+          <h3>Verified</h3>
+          <p>Automated Edit Mode and Play Mode tests protect the most important runtime behavior.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="process" class="container">
+      <h2>How I approached the development</h2>
+      <div class="product-process-grid">
+        <article>
+          <h3>1. Defined responsibilities</h3>
+          <p>
+            I separated configuration, runtime state, attack execution, and presentation.
+            This keeps changes in one area from creating unnecessary dependencies elsewhere.
+          </p>
+        </article>
+        <article>
+          <h3>2. Designed for different projects</h3>
+          <p>
+            The weapon layer receives the information it needs but does not own unrelated
+            game systems. That makes integration possible without forcing a full architecture.
+          </p>
+        </article>
+        <article>
+          <h3>3. Made authoring practical</h3>
+          <p>
+            ScriptableObject-based data gives developers a readable place to tune identity,
+            damage, timing, range, critical hits, and automatic attack cycles.
+          </p>
+        </article>
+        <article>
+          <h3>4. Treated usability as part of the code</h3>
+          <p>
+            Sample content, documentation, inspector-friendly configuration, and predictable
+            defaults were developed alongside the runtime system rather than added afterward.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="demonstration" class="container">
+      <h2>System in action</h2>
+      <p>
+        Two deliberately simple examples demonstrate that different attack styles
+        can share the same weapon foundation without exposing its source code.
+      </p>
+
+      <div class="product-gallery product-demo-gallery">
+        <figure>
+          <img
+            src="GIF 2026-09-02 11-22-35.gif"
+            alt="A ranged weapon repeatedly attacking practice targets"
+          >
+          <figcaption>A ranged example demonstrating repeatable attacks and target damage.</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="GIF 2026-09-02 11-14-08.gif"
+            alt="A rotating area weapon attacking nearby practice targets"
+          >
+          <figcaption>An area-based example using the same reusable weapon foundation.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="testing" class="container">
+      <h2>Automated testing</h2>
+      <p>
+        Because this was intended for reuse, I tested behavior that could quietly break as the
+        product evolved. Edit Mode tests cover stat calculations, upgrades, cooldown rules, and
+        damage outcomes. Play Mode tests exercise time-dependent automatic weapon cycles in a
+        running Unity environment.
+      </p>
+      <p class="testing-note">
+        This lets me demonstrate engineering discipline and product reliability without exposing
+        proprietary implementation. A Unity Test Runner result screenshot can be added here later.
+      </p>
+    </section>
+
+    <section id="workflow" class="container">
+      <h2>Developer-facing workflow</h2>
+      <p>
+        These editor views show how a developer connects a weapon and configures its data. They
+        communicate the system’s usability while keeping the underlying source private.
+      </p>
+
+      <div class="product-gallery">
+        <figure>
+          <img src="GunData.PNG" alt="Unity inspector showing configurable weapon data">
+          <figcaption>Data-driven setup for weapon identity, core stats, attack type, and optional assets.</figcaption>
+        </figure>
+        <figure>
+          <img src="Gun.PNG" alt="Unity inspector showing the weapon component setup">
+          <figcaption>A small component surface connects data, attack point, and optional presentation.</figcaption>
+        </figure>
+        <figure>
+          <img src="Saw.PNG" alt="Unity inspector showing a different weapon using the same system">
+          <figcaption>The same foundation supports a different weapon and visual behavior.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>What this project demonstrates</h2>
+      <p>
+        Reusable architecture, data-driven Unity tooling, API boundary design, automated testing,
+        documentation, and the judgment required to turn a working gameplay feature into something
+        another developer can confidently adopt.
+      </p>
+      <p class="privacy-note">
+        The source code and lower-level implementation details are intentionally not published
+        because Reusable Weapon System was developed as a commercial product.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Ebben. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

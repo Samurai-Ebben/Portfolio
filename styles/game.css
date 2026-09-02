@@ -136,7 +136,7 @@
 
 .game-project-featured {
   margin-bottom: 2rem;
-  padding: clamp(2rem, 5vw, 4rem);
+  overflow: hidden;
   border: 1px solid rgba(255, 122, 24, 0.45);
   border-radius: var(--radius);
   background:
@@ -144,8 +144,30 @@
     var(--game-surface);
 }
 
+.game-project-featured__media {
+  overflow: hidden;
+  aspect-ratio: 21 / 7;
+  background: #0a060c;
+}
+
+.game-project-featured__media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.poolstory-featured-media img {
+  object-position: center 18%;
+}
+
+.weapon-system-featured-media img {
+  object-fit: contain;
+}
+
 .game-project-featured__content {
   max-width: 900px;
+  padding: clamp(2rem, 5vw, 4rem);
 }
 
 .game-project-featured h3 {
@@ -282,4 +304,25 @@
   .game-project-grid {
     grid-template-columns: 1fr;
   }
+
+  .game-project-featured__media {
+    aspect-ratio: 16 / 7;
+  }
+}
+
+.weapon-system-featured {
+  border-color: rgba(216, 164, 255, 0.45);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(216, 164, 255, 0.13),
+      transparent 40%
+    ),
+    var(--game-surface);
+}
+
+.game-project-relevance {
+  max-width: 780px;
+  margin-top: 1rem;
+  color: var(--game-muted);
 }
