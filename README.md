@@ -1,5 +1,5 @@
 
-# Ebben's Game Development Portfolio
+# Ebben's Development Portfolio
 
 I am a passionate game developer focusing on gameplay programming, player mechanics, and AI. As well as experienced with shaders, UI, Editor tools and systems.
 This repository showcases the projects I've worked on, highlighting my skills and experience in game development.
